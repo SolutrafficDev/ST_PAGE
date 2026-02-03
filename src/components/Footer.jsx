@@ -1,8 +1,14 @@
 import "../styles/footer.css";
+import { logos } from "../assets/logos";
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <img 
+        src={logos.whiteSm} 
+        alt="SolutrafficCra Logo" 
+        className="footer-logo"
+      />
       <h3>SolutrafficCra.</h3>
 
       <p>19a #15a41, Cali, Valle del Cauca</p>
