@@ -1,11 +1,19 @@
+import { SecondaryText, BodyText } from "../components/Typography";
+
 const Servicios = () => {
   return (
     <section id="servicios" className="section">
-      <h2>Servicios</h2>
+      <SecondaryText text="Servicios" />
       <ul>
-        <li>Servicio 1</li>
-        <li>Servicio 2</li>
-        <li>Servicio 3</li>
+        <li>
+          <BodyText text="Servicio 1" />
+        </li>
+        <li>
+          <BodyText text="Servicio 2" />
+        </li>
+        <li>
+          <BodyText text="Servicio 3" />
+        </li>
       </ul>
     </section>
   );

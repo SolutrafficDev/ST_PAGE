@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  /* Usa la fuente definida en index.css: Be Vietnam Pro */
+  font-family: var(--font-sans);
 }
 
 .section {
