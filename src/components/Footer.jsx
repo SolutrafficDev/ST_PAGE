@@ -21,9 +21,7 @@ const Footer = () => {
 
           <div className="footer-info">
             <BodyText text="Email: director@solutraffic.com" color="text-contrast-light" />
-            <BodyText text="Email: gerente.comercial@solutraffic.com" color="text-contrast-light" />
-            <BodyText text="📞 +57 300 7030061" color="text-contrast-light" />
-            <BodyText text="📞 +57 318 2152340" color="text-contrast-light" />
+            <BodyText text="+57 318 2152340" color="text-contrast-light" />
           </div>
 
           <MiniText 

@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--secondary);
-  padding: 12px 20px;
+  background-color: var(--accent);
+  padding: 6px 12px 6px 0;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-logo-container {
@@ -18,12 +18,10 @@
 }
 
 .navbar-logo {
-  width: 40px;
-  height: 40px;
   object-fit: contain;
-  background-color: var(--background);
-  border-radius: 4px;
-  padding: 4px;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
 }
 
 .navbar-buttons {
@@ -31,16 +29,17 @@
   align-items: center;
   gap: 8px;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end; /* Cambiado de center a flex-end para alinear a la derecha */
 }
 
 .navbar-button {
   background: none;
   border: none;
-  color: var(--contrast-light);
+  border-bottom: 2px solid transparent;
+  color: var(--foreground);
   cursor: pointer;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 0;
   transition: all 0.2s ease;
   /* Usa text-body-md-mobile md:text-body-md del sistema */
   font-size: var(--text-body-md-mobile);
@@ -48,53 +47,66 @@
 }
 
 .navbar-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--primary);
+  border-bottom-color: var(--primary);
 }
 
 .navbar-button.active {
-  background-color: var(--primary);
-  color: var(--accent);
+  border-bottom-color: var(--primary);
+  color: var(--primary); 
   font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
   .navbar {
-    padding: 12px 40px;
+    padding: 8px 24px;
   }
-  
+
+  .navbar-logo {
+    width: 220px;
+    height: 70px;
+  }
+
   .navbar-button {
     font-size: var(--text-body-md);
-    padding: 10px 20px;
+    padding: 10px 16px;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 32px;
+  }
+
   .navbar-logo {
-    width: 48px;
-    height: 48px;
+    width: 300px;
+    height: 90px;
+  }
+
+  .navbar-button {
+    padding: 12px 20px;
   }
 }
 
 @media (max-width: 640px) {
   .navbar {
-    padding: 10px 12px;
-    gap: 12px;
+    padding: 4px 6px;
+    gap: 10px;
   }
-  
+
   .navbar-buttons {
     gap: 4px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .navbar-button {
-    padding: 6px 12px;
+    padding: 5px 10px;
     font-size: var(--text-body-sm-mobile);
     white-space: nowrap;
   }
-  
+
   .navbar-logo {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
   }
 }

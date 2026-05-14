@@ -45,22 +45,25 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo-container">
-        <img 
-          src={logos.originalSm} 
-          alt="SolutrafficCra Logo" 
+        <img
+          src={logos.lightGraySm}
+          alt="SolutrafficCra Logo"
           className="navbar-logo"
         />
       </div>
-      
+
       <div className="navbar-buttons">
         {navItems.map((item) => (
-          <button 
+          <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
             className={`navbar-button ${activeSection === item.id ? "active" : ""}`}
             data-section={item.id}
           >
-            <BodyText text={item.text} />
+            <BodyText
+              text={item.text}
+              className="text-foreground"
+            />
           </button>
         ))}
       </div>
