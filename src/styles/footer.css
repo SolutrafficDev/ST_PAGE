@@ -64,3 +64,17 @@
     max-width: 60px;
   }
 }
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 40px 32px;
+  }
+
+  .footer-content {
+    gap: 32px;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+  }
+}
