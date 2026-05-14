@@ -2,21 +2,111 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #222;
-  padding: 10px;
+  background-color: var(--accent);
+  padding: 6px 12px 6px 0;
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 16px;
+  z-index: 1000;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.navbar button {
+.navbar-logo-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end; /* Cambiado de center a flex-end para alinear a la derecha */
+}
+
+.navbar-button {
   background: none;
   border: none;
-  color: white;
+  border-bottom: 2px solid transparent;
+  color: var(--foreground);
   cursor: pointer;
-  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  /* Usa text-body-md-mobile md:text-body-md del sistema */
+  font-size: var(--text-body-md-mobile);
+  font-weight: 400;
 }
 
-.navbar button:hover {
-  text-decoration: underline;
+.navbar-button:hover {
+  border-bottom-color: var(--primary);
+}
+
+.navbar-button.active {
+  border-bottom-color: var(--primary);
+  color: var(--primary); 
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 8px 24px;
+  }
+
+  .navbar-logo {
+    width: 220px;
+    height: 70px;
+  }
+
+  .navbar-button {
+    font-size: var(--text-body-md);
+    padding: 10px 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 32px;
+  }
+
+  .navbar-logo {
+    width: 300px;
+    height: 90px;
+  }
+
+  .navbar-button {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 4px 6px;
+    gap: 10px;
+  }
+
+  .navbar-buttons {
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar-button {
+    padding: 5px 10px;
+    font-size: var(--text-body-sm-mobile);
+    white-space: nowrap;
+  }
+
+  .navbar-logo {
+    width: 56px;
+    height: 56px;
+  }
 }

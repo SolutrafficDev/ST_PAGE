@@ -1,11 +1,27 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
+  background: (--foreground);
 }
 
 .section {
   min-height: 100vh;
-  padding: 80px 20px;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
 }
 
 h1, h2 {
