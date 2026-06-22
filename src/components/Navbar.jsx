@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/navbar.css";
 import { BodyText } from "./Typography";
 import { logos } from "../assets/logos";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -14,7 +18,21 @@ const Navbar = () => {
     }
   };
 
+  const handleNavClick = (id) => {
+    if (isHome) {
+      scrollToSection(id);
+    } else {
+      navigate(`/#${id}`);
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   useEffect(() => {
+    if (!isHome) return;
+
     const handleScroll = () => {
       const sections = ["inicio", "sobre", "servicios", "productos", "contacto"];
       const scrollPosition = window.scrollY + 100;
@@ -29,10 +47,10 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
 
   const navItems = [
     { id: "inicio", text: "Inicio" },
@@ -56,7 +74,7 @@ const Navbar = () => {
         {navItems.map((item) => (
           <button
             key={item.id}
-            onClick={() => scrollToSection(item.id)}
+            onClick={() => handleNavClick(item.id)}
             className={`navbar-button ${activeSection === item.id ? "active" : ""}`}
             data-section={item.id}
           >
