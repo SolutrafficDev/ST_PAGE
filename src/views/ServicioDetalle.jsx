@@ -29,11 +29,13 @@ const ServicioDetalle = () => {
 
   return (
     <div className="min-h-screen">
-      <img
-        src={servicio.imagen}
-        alt={servicio.titulo}
-        className="w-full object-cover"
-      />
+      <div className="bg-accent pt-20">
+        <img
+          src={servicio.imagen}
+          alt={servicio.titulo}
+          className="w-full object-cover block"
+        />
+      </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         <div className="text-center">
