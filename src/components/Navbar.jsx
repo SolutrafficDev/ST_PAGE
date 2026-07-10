@@ -6,6 +6,7 @@ import { logos } from "../assets/logos";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
+  const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -31,9 +32,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (!isHome) return;
+    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+
+      if (!isHome) return;
       const sections = ["inicio", "sobre", "servicios", "productos", "contacto"];
       const scrollPosition = window.scrollY + 100;
 
@@ -61,10 +73,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${!visible ? "navbar--hidden" : ""}`}>
       <div className="navbar-logo-container">
         <img
-          src={logos.lightGraySm}
+          src={logos.lightGrayFullt}
           alt="SolutrafficCra Logo"
           className="navbar-logo"
         />
