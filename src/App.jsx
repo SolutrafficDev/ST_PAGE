@@ -9,6 +9,7 @@ import Contactanos from "./views/Contactanos";
 import ServicioDetalle from "./views/ServicioDetalle";
 import ProductoDetalle from "./views/ProductoDetalle";
 import Footer from "./components/Footer";
+import WhatsappButton from "./components/WhatsappButton";
 import "./styles/main.css";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/productos/:id" element={<ProductoDetalle />} />
       </Routes>
       <Footer />
+      <WhatsappButton />
     </>
   );
 }
