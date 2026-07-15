@@ -10,7 +10,7 @@ const Carrusel = ({ slides }) => {
 
   return (
     <div className="relative w-full overflow-hidden rounded-2xl bg-white shadow-lg">
-      <div className="relative h-[400px] md:h-[500px]">
+      <div className="relative h-[500px] md:h-[650px]">
         <img
           src={slides[current].img}
           alt={`Slide ${current + 1}`}
