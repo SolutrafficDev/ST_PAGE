@@ -24,6 +24,20 @@ body {
   }
 }
 
+/* Colores de fondo de secciones */
+.section-yellow {
+  background-color: var(--primary);
+}
+
+.section-cyan {
+  background-color: var(--cyan);
+}
+
+.section-blue {
+  background-color: var(--secondary);
+  color: var(--contrast-light);
+}
+
 h1, h2 {
   margin-bottom: 10px;
 }
