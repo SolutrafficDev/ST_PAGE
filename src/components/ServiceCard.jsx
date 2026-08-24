@@ -7,7 +7,7 @@ const ServiceCard = ({ servicio, index }) => {
   return (
     <div
       onClick={() => navigate(`/servicios/${servicio.id}`)}
-      className={`group h-full flex flex-col cursor-pointer transition-all duration-300 animate-fade-up`}
+      className={`group h-full flex flex-col cursor-pointer transition-all duration-300 animate-fade-up bg-white rounded-2xl shadow-xl hover:shadow-2xl`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative overflow-hidden flex-shrink-0">
@@ -18,7 +18,7 @@ const ServiceCard = ({ servicio, index }) => {
         />
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/15" />
       </div>
-      <div className="bg-white p-8 sm:p-10 flex flex-col flex-1 mt-6">
+      <div className="bg-white p-8 sm:p-10 flex flex-col flex-1">
         <TertiaryText
           text={servicio.titulo}
           weight="font-semibold"
