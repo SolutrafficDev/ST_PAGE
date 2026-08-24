@@ -3,11 +3,12 @@ import { BodyText, TertiaryText } from "./Typography";
 
 const ServiceCard = ({ servicio, index }) => {
   const navigate = useNavigate();
+  const tint = "bg-foreground";
 
   return (
     <div
       onClick={() => navigate(`/servicios/${servicio.id}`)}
-      className="group bg-foreground rounded-md shadow-sm overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg animate-fade-up"
+      className={`group ${tint} rounded-md shadow-sm overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg animate-fade-up`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative overflow-hidden">
@@ -29,9 +30,12 @@ const ServiceCard = ({ servicio, index }) => {
           color="text-contrast-soft"
           className="mt-2 line-clamp-2"
         />
-        <span className="inline-block mt-4 text-primary font-semibold text-sm transition-all duration-300 group-hover:translate-x-1">
+        <button
+          onClick={() => navigate(`/servicios/${servicio.id}`)}
+          className="mt-4 inline-flex items-center gap-2 bg-primary text-accent px-5 py-2.5 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary"
+        >
           Ver más →
-        </span>
+        </button>
       </div>
     </div>
   );

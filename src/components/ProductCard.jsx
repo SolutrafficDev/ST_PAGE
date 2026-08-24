@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { BodyText, TertiaryText } from "./Typography";
 
+const SOFT_TINTS = ["bg-yellow-soft", "bg-cyan-soft", "bg-blue-soft"];
+
 const ProductCard = ({ producto, index }) => {
   const navigate = useNavigate();
+  const tint = SOFT_TINTS[index % SOFT_TINTS.length];
 
   return (
     <div
       onClick={() => navigate(`/productos/${producto.id}`)}
-      className="group bg-foreground rounded-md shadow-sm overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg animate-fade-up"
+      className={`group ${tint} rounded-md shadow-sm overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg animate-fade-up`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative overflow-hidden">
