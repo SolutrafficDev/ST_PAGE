@@ -3,6 +3,7 @@ import {
   FaLaptopCode,
   FaTrafficLight,
   FaRoute,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import Reveal from "../components/Reveal";
 import gifTrafico from "../assets/a.gif";
@@ -34,9 +35,11 @@ const Inner = ({ children }) => (
 );
 
 const SobreNosotros = () => {
+  const municipios = [{ nombre: "Cali, Valle del Cauca" }];
+
   return (
     <section id="sobre">
-      {/* Sección: Trayectoria (imagen izq, fondo azul a todo el ancho der) */}
+      {/* Sección: Trayectoria (imagen izq, fondo blanco a todo el ancho der) */}
       <div className="lg:flex lg:items-stretch">
         <Reveal direction="right" className="lg:w-2/5">
           <img
@@ -45,37 +48,37 @@ const SobreNosotros = () => {
             className="w-full h-72 lg:h-full object-cover"
           />
         </Reveal>
-        <div className="bg-secondary lg:w-3/5">
+        <div className="bg-background lg:w-3/5">
           <Inner>
-            <div className="py-12">
+            <div className="py-16">
               <Reveal delay={100}>
-                <SmallLabel text="¿Quiénes Somos?" light />
-                <BigTitle text="Trayectoria y Equipo de Especialistas" light />
+                <SmallLabel text="¿Quiénes Somos?" />
+                <BigTitle text="Trayectoria y Equipo de Especialistas" />
               </Reveal>
               <div className="mt-8 space-y-6">
                 <Reveal delay={200}>
                   <BodyText
                     text="Solutraffic S.A.S es una compañía Colombiana dedicada a la ingeniería de la movilidad urbana, con veinticinco años de experiencia en el mercado de productos, componentes y soluciones integrales para la gestión de esta en las ciudades."
-                    color="text-contrast-light"
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={300}>
                   <BodyText
                     text="Nuestros recursos y esfuerzos se han orientado hacia el diseño, fabricación, suministro de productos y mantenimiento de sistemas tecnológicos de tráfico, que cuentan con las normas que garantizan la absoluta confiabilidad de nuestra empresa como aliado."
-                    color="text-contrast-light"
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={400}>
                   <BodyText
                     text="Lo anterior soportado por un programa de investigación y desarrollo que asegura que todo el portafolio de soluciones tecnológicas esté a la vanguardia. Así su municipio o empresa logrará la optimización del presupuesto y la eficiencia en la aplicación de las soluciones para cada una de sus necesidades."
-                    color="text-contrast-light"
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={500}>
-                  <p className="text-contrast-light text-body-md-mobile md:text-body-md font-semibold leading-relaxed">
+                  <p className="text-contrast text-body-md-mobile md:text-body-md font-semibold leading-relaxed">
                     En la actualidad son cientos de intersecciones viales intervenidas e
                     implementadas exitosamente por Solutraffic.
                   </p>
@@ -86,7 +89,7 @@ const SobreNosotros = () => {
         </div>
       </div>
 
-      {/* Sección: Nuestro Talento (fondo amarillo a todo el ancho izq, imagen der) */}
+      {/* Sección: Nuestro Talento (fondo azul a todo el ancho izq, imagen der) */}
       <div className="lg:flex lg:flex-row-reverse lg:items-stretch">
         <Reveal direction="left" className="lg:w-2/5">
           <img
@@ -95,29 +98,32 @@ const SobreNosotros = () => {
             className="w-full h-72 lg:h-full object-cover"
           />
         </Reveal>
-        <div className="bg-primary lg:w-3/5">
+        <div className="bg-secondary lg:w-3/5">
           <Inner>
-            <div className="py-12">
+            <div className="py-16">
               <Reveal delay={100}>
-                <SmallLabel text="Nuestro Talento" />
-                <BigTitle text="Equipo de Especialistas a tu Servicio" />
+                <SmallLabel text="Nuestro Talento" light />
+                <BigTitle text="Equipo de Especialistas a tu Servicio" light />
               </Reveal>
               <div className="mt-8 space-y-6">
                 <Reveal delay={200}>
                   <BodyText
                     text="Un experimentado equipo de ingenieros y técnicos especialistas están a su servicio brindando un conocimiento excepcional en productos y soluciones para la gestión de la movilidad."
+                    color="text-contrast-light"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={300}>
                   <BodyText
                     text="Nuestros ingenieros de hardware y software trabajan en estrecha colaboración con las autoridades de tránsito de los municipios y los comités de normas para diseñar y crear soluciones innovadoras y fiables para la gestión de la movilidad y la correspondiente mejora en la calidad de vida de los ciudadanos."
+                    color="text-contrast-light"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={400}>
                   <BodyText
                     text="Un programa de investigación coherente garantiza que nuestros productos incorporen la última tecnología apropiada que permita satisfacer y superar las expectativas de nuestros clientes."
+                    color="text-contrast-light"
                     className="block leading-relaxed"
                   />
                 </Reveal>
@@ -148,41 +154,55 @@ const SobreNosotros = () => {
         </div>
       </div>
 
-      {/* Sección: Calidad (imagen izq, fondo azul a todo el ancho der) */}
+      {/* Sección: Compromiso (imagen izq, fondo blanco a todo el ancho der) */}
       <div className="lg:flex lg:items-stretch">
         <Reveal direction="right" className="lg:w-2/5">
           <img
-            src={imgIngeniero}
-            alt="Calidad y control de tráfico"
+            src={imgFabrica}
+            alt="Compromiso en planta y línea de semáforos"
             className="w-full h-72 lg:h-full object-cover"
           />
         </Reveal>
-        <div className="bg-secondary lg:w-3/5">
+        <div className="bg-background lg:w-3/5">
           <Inner>
-            <div className="py-12">
+            <div className="py-16">
               <Reveal delay={100}>
-                <SmallLabel text="Certificaciones y Brochure" light />
-                <BigTitle text="Calidad y Recursos Normados" light />
+                <SmallLabel text="Política de Calidad" />
+                <BigTitle text="Compromiso Seguro y Sostenible" />
               </Reveal>
               <div className="mt-8 space-y-6">
                 <Reveal delay={200}>
                   <BodyText
-                    text="Nuestros recursos y esfuerzos se han orientado hacia el diseño, fabricación, suministro de productos y mantenimiento de sistemas tecnológicos de tráfico."
-                    color="text-contrast-light"
+                    text="Estamos comprometidos con la calidad, seguridad e innovación en nuestras aplicaciones y servicios para la movilidad, manteniendo siempre un trato personalizado con el cliente e involucrándolo plenamente en los proyectos que realizan."
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={300}>
                   <BodyText
-                    text="Todos nuestros productos y sistemas cuentan con las normas que garantizan la absoluta confiabilidad de nuestra empresa como aliado."
-                    color="text-contrast-light"
+                    text="Proporcionamos siempre un servicio integral para lograr la satisfacción de nuestros clientes de la industria privada y del sector oficial."
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={400}>
                   <BodyText
-                    text="Nuestros procesos de diseño y mantenimiento cumplen con estrictas normas de calidad, lo que asegura la confiabilidad de nuestra empresa como aliado y la eficiencia en la aplicación de las soluciones para cada una de sus necesidades."
-                    color="text-contrast-light"
+                    text="Con el SG, seguridad, salud en el trabajo para nuestros colaboradores, proveedores y contratistas, aseguramos las condiciones para un trabajo seguro y confiable, previniendo accidentes de trabajo y enfermedades laborales."
+                    color="text-contrast-soft"
+                    className="block leading-relaxed"
+                  />
+                </Reveal>
+                <Reveal delay={500}>
+                  <BodyText
+                    text="A través de la identificación de los peligros y prevención de riesgos, planes de contingencia asociados con las actividades y aportes significativos al ambiente, optimizamos los recursos renovables y no renovables, previniendo la contaminación."
+                    color="text-contrast-soft"
+                    className="block leading-relaxed"
+                  />
+                </Reveal>
+                <Reveal delay={600}>
+                  <BodyText
+                    text="Cumplimos con la legislación colombiana vigente aplicable y la mejora continua en el desempeño de los programas de calidad, Seguridad, Salud en el trabajo y ambiente, para fortalecer el desarrollo de competencias además de la calidad de vida de los trabajadores."
+                    color="text-contrast-soft"
                     className="block leading-relaxed"
                   />
                 </Reveal>
@@ -192,52 +212,46 @@ const SobreNosotros = () => {
         </div>
       </div>
 
-      {/* Sección: Compromiso (imagen izq, fondo amarillo a todo el ancho der) */}
+      {/* Sección: Calidad y municipios (imagen izq, fondo amarillo a todo el ancho der) */}
       <div className="lg:flex lg:items-stretch">
         <Reveal direction="right" className="lg:w-2/5">
           <img
-            src={imgFabrica}
-            alt="Compromiso en planta y línea de semáforos"
+            src={imgIngeniero}
+            alt="Calidad y control de tráfico"
             className="w-full h-72 lg:h-full object-cover"
           />
         </Reveal>
         <div className="bg-primary lg:w-3/5">
           <Inner>
-            <div className="py-12">
+            <div className="py-16">
               <Reveal delay={100}>
-                <SmallLabel text="Política de Calidad" />
-                <BigTitle text="Compromiso Seguro y Sostenible" />
+                <SmallLabel text="Certificaciones y Brochure" />
+                <BigTitle text="Calidad y Recursos Normados" />
               </Reveal>
               <div className="mt-8 space-y-6">
                 <Reveal delay={200}>
                   <BodyText
-                    text="Estamos comprometidos con la calidad, seguridad e innovación en nuestras aplicaciones y servicios para la movilidad, manteniendo siempre un trato personalizado con el cliente e involucrándolo plenamente en los proyectos que realizan."
+                    text="Todos nuestros productos y sistemas cuentan con las normas que garantizan la absoluta confiabilidad de nuestra empresa como aliado. Nuestros procesos de diseño y mantenimiento cumplen con estrictas normas de calidad, asegurando la eficiencia en la aplicación de las soluciones para cada una de sus necesidades."
                     className="block leading-relaxed"
                   />
                 </Reveal>
                 <Reveal delay={300}>
-                  <BodyText
-                    text="Proporcionamos siempre un servicio integral para lograr la satisfacción de nuestros clientes de la industria privada y del sector oficial."
-                    className="block leading-relaxed"
-                  />
+                  <p className="text-contrast text-body-md-mobile md:text-body-md font-semibold leading-relaxed">
+                    Municipios donde hemos trabajado:
+                  </p>
                 </Reveal>
                 <Reveal delay={400}>
-                  <BodyText
-                    text="Con el SG, seguridad, salud en el trabajo para nuestros colaboradores, proveedores y contratistas, aseguramos las condiciones para un trabajo seguro y confiable, previniendo accidentes de trabajo y enfermedades laborales."
-                    className="block leading-relaxed"
-                  />
-                </Reveal>
-                <Reveal delay={500}>
-                  <BodyText
-                    text="A través de la identificación de los peligros y prevención de riesgos, planes de contingencia asociados con las actividades y aportes significativos al ambiente, optimizamos los recursos renovables y no renovables, previniendo la contaminación."
-                    className="block leading-relaxed"
-                  />
-                </Reveal>
-                <Reveal delay={600}>
-                  <BodyText
-                    text="Cumplimos con la legislación colombiana vigente aplicable y la mejora continua en el desempeño de los programas de calidad, Seguridad, Salud en el trabajo y ambiente, para fortalecer el desarrollo de competencias además de la calidad de vida de los trabajadores."
-                    className="block leading-relaxed"
-                  />
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    {municipios.map((m) => (
+                      <span
+                        key={m.nombre}
+                        className="inline-flex items-center gap-2 bg-white shadow-md px-5 py-3 rounded-full font-semibold text-accent"
+                      >
+                        <FaMapMarkerAlt className="text-secondary" />
+                        {m.nombre}
+                      </span>
+                    ))}
+                  </div>
                 </Reveal>
               </div>
             </div>
