@@ -11,10 +11,17 @@ const Servicios = () => {
               Servicios
             </h1>
           </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {servicios.map((servicio, index) => (
-            <ServiceCard key={servicio.id} servicio={servicio} index={index} />
-          ))}
+        <div className="mt-8">
+          <div className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar items-stretch">
+            {servicios.map((servicio, index) => (
+              <div
+                key={servicio.id}
+                className="snap-start shrink-0 w-[85vw] sm:w-[70vw] lg:w-[55vw]"
+              >
+                <ServiceCard servicio={servicio} index={index} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
