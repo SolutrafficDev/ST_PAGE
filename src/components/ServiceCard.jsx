@@ -14,11 +14,11 @@ const ServiceCard = ({ servicio, index }) => {
         <img
           src={servicio.gif}
           alt={servicio.titulo}
-          className="w-full h-72 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-80 sm:h-72 lg:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/15" />
       </div>
-      <div className="bg-white p-8 sm:p-10 flex flex-col flex-1">
+      <div className="bg-white p-6 sm:p-8 flex flex-col flex-1">
         <TertiaryText
           text={servicio.titulo}
           weight="font-semibold"
