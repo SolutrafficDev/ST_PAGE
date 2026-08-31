@@ -5,22 +5,40 @@ body {
 }
 
 .section {
-  min-height: 100vh;
-  padding-top: 5rem;
+  scroll-margin-top: 5.5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.section.section-flush-bottom {
+  padding-bottom: 0;
+}
+
+.section.section-compact {
   padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    scroll-margin-top: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .section.section-compact {
+    padding-bottom: 3.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding-top: 7rem;
-    padding-bottom: 5rem;
+    scroll-margin-top: 6.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+  }
+
+  .section.section-compact {
+    padding-bottom: 4rem;
   }
 }
 
