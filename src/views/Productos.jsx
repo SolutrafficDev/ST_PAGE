@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { SecondaryText, BodyText, TertiaryText } from "../components/Typography";
 import productos from "../data/productos";
 
 const Productos = () => {
@@ -13,7 +12,7 @@ const Productos = () => {
     clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrent((c) => (c === productos.length - 1 ? 0 : c + 1));
-    }, 3000);
+    }, 6000);
   }, []);
 
   useEffect(() => {
@@ -37,12 +36,14 @@ const Productos = () => {
   };
 
   return (
-    <section id="productos" className="section">
+    <section id="productos" className="section section-compact bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SecondaryText text="Productos" color="text-contrast" />
+        <h1 className="text-h1-mobile md:text-h1 font-bold tracking-tight text-contrast-light mt-2">
+          Productos
+        </h1>
       </div>
 
-      <div className="relative mt-8">
+      <div className="relative mt-5">
         <div
           className="relative overflow-hidden cursor-pointer"
           onClick={() => navigate(`/productos/${producto.id}`)}
@@ -50,24 +51,20 @@ const Productos = () => {
           <img
             src={producto.gif}
             alt={producto.titulo}
-            className="w-full h-[26rem] sm:h-[30rem] lg:h-[34rem] object-cover"
+            className="w-full h-[24rem] sm:h-[26rem] lg:h-[30rem] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-            <div className="max-w-7xl mx-auto w-full">
-              <TertiaryText
-                text={producto.titulo}
-                weight="font-semibold"
-                color="text-contrast-light"
-              />
-              <BodyText
-                text={producto.descripcionCorta}
-                color="text-contrast-light/90"
-                className="mt-3 max-w-2xl"
-              />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/20" />
+          <div className="absolute top-0 left-0 p-4 sm:p-8">
+            <div className="w-full max-w-[600px] bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+              <h3 className="text-h4-mobile md:text-h4 font-bold text-contrast tracking-tight line-clamp-2">
+                {producto.titulo}
+              </h3>
+              <p className="text-body-sm-mobile md:text-body-sm text-contrast-muted mt-3 leading-relaxed line-clamp-2">
+                {producto.descripcionCorta}
+              </p>
               <button
                 onClick={() => navigate(`/productos/${producto.id}`)}
-                className="mt-6 inline-flex items-center gap-2 bg-primary text-accent px-6 py-3 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary"
+                className="mt-6 inline-flex items-center gap-2 bg-primary text-accent px-4 py-2 rounded text-sm font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary"
               >
                 Ver más →
               </button>
@@ -94,13 +91,13 @@ const Productos = () => {
         </button>
       </div>
 
-      <div className="mx-auto max-w-7xl flex justify-center gap-2 mt-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl flex justify-center gap-2 mt-4 px-4 sm:px-6 lg:px-8">
         {productos.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
             className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
-              i === current ? "bg-primary scale-125" : "bg-gray-300 hover:bg-gray-400"
+              i === current ? "bg-primary scale-125" : "bg-white/40 hover:bg-white/70"
             }`}
           />
         ))}

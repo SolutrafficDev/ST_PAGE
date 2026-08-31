@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SecondaryText, BodyText } from "../components/Typography";
 
 const Contactanos = () => {
-  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", mensaje: "" });
+  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", area: "", mensaje: "" });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
@@ -29,6 +29,7 @@ const Contactanos = () => {
             name: form.nombre,
             email: form.email,
             phone: form.telefono,
+            area: form.area,
             message: form.mensaje,
           },
         }),
@@ -37,7 +38,7 @@ const Contactanos = () => {
       if (!res.ok) throw new Error("Error al enviar");
 
       setSent(true);
-      setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
+      setForm({ nombre: "", email: "", telefono: "", area: "", mensaje: "" });
     } catch {
       setError(true);
     } finally {
@@ -51,8 +52,11 @@ const Contactanos = () => {
   };
 
   return (
-    <section id="contacto" className="section px-4 sm:px-6 lg:px-8">
+    <section id="contacto" className="section section-compact px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        <h1 className="text-h1-mobile md:text-h1 font-bold tracking-tight text-contrast mt-2">
+          Contáctanos
+        </h1>
 
         {(sent || error) && (
           <div
@@ -104,31 +108,33 @@ const Contactanos = () => {
           </div>
         )}
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          <div className="flex flex-col justify-center space-y-6">
-            <h3 className="text-h3-mobile md:text-h3 text-contrast font-semibold">
-              Hablemos de tu proyecto
-            </h3>
-            <p className="text-contrast-soft leading-relaxed">
-              Estamos listos para ayudarte a resolver los desafíos de movilidad de tu ciudad o empresa. 
-              Cuéntanos más sobre lo que necesitas y te daremos una solución a la medida.
-            </p>
-            <div className="space-y-3 pt-4">
-              <div className="flex items-center gap-3 text-contrast-soft">
-                <span className="text-primary text-lg">📧</span>
-                <span>director@solutraffic.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-contrast-soft">
-                <span className="text-primary text-lg">📞</span>
-                <span>+57 318 2152340</span>
-              </div>
-              <div className="flex items-center gap-3 text-contrast-soft">
-                <span className="text-primary text-lg">📍</span>
-                <span>Cali, Colombia</span>
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+          <div className="flex flex-col justify-between">
+            <div className="space-y-5">
+              <h3 className="text-h3-mobile md:text-h3 text-contrast font-semibold">
+                Hablemos de tu proyecto
+              </h3>
+              <p className="text-contrast-soft leading-relaxed">
+                Estamos listos para ayudarte a resolver los desafíos de movilidad de tu ciudad o empresa. 
+                Cuéntanos más sobre lo que necesitas y te daremos una solución a la medida.
+              </p>
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-3 text-contrast-soft">
+                  <span className="text-primary text-lg">📧</span>
+                  <span>director@solutraffic.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-contrast-soft">
+                  <span className="text-primary text-lg">📞</span>
+                  <span>+57 318 2152340</span>
+                </div>
+                <div className="flex items-center gap-3 text-contrast-soft">
+                  <span className="text-primary text-lg">📍</span>
+                  <span>Cali, Colombia</span>
+                </div>
               </div>
             </div>
 
-            <div className="mt-6 w-full aspect-video rounded-lg overflow-hidden shadow-sm">
+            <div className="mt-8 w-full h-52 sm:h-60 rounded-lg overflow-hidden shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.123!2d-76.5248616!3d3.4390817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f4ab67647f%3A0x304ed78e87b1675d!2sSolutraffic+Ingenieria+S.A.S!5e0!3m2!1sen!2sco!4v1"
                 width="100%"
@@ -142,37 +148,39 @@ const Contactanos = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 bg-foreground p-8 rounded-lg shadow-sm">
-            <div>
-              <label htmlFor="nombre" className="block text-contrast font-medium mb-1.5">
-                Nombre
-              </label>
-              <input
-                id="nombre"
-                name="nombre"
-                type="text"
-                required
-                value={form.nombre}
-                onChange={handleChange}
-                className="w-full border border-border rounded-md px-4 py-3 bg-background text-contrast outline-none focus:border-primary transition-colors"
-                placeholder="Tu nombre"
-              />
-            </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-foreground p-5 rounded-lg shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="nombre" className="block text-contrast font-medium mb-1.5">
+                  Nombre
+                </label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  required
+                  value={form.nombre}
+                  onChange={handleChange}
+                  className="w-full border border-border rounded-md px-4 py-2.5 bg-background text-contrast outline-none focus:border-primary transition-colors"
+                  placeholder="Tu nombre"
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-contrast font-medium mb-1.5">
-                Correo electrónico
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={form.email}
-                onChange={handleChange}
-                className="w-full border border-border rounded-md px-4 py-3 bg-background text-contrast outline-none focus:border-primary transition-colors"
-                placeholder="correo@ejemplo.com"
-              />
+              <div>
+                <label htmlFor="email" className="block text-contrast font-medium mb-1.5">
+                  Correo electrónico
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                  className="w-full border border-border rounded-md px-4 py-2.5 bg-background text-contrast outline-none focus:border-primary transition-colors"
+                  placeholder="correo@ejemplo.com"
+                />
+              </div>
             </div>
 
             <div>
@@ -185,9 +193,37 @@ const Contactanos = () => {
                 type="tel"
                 value={form.telefono}
                 onChange={handleChange}
-                className="w-full border border-border rounded-md px-4 py-3 bg-background text-contrast outline-none focus:border-primary transition-colors"
+                className="w-full border border-border rounded-md px-4 py-2.5 bg-background text-contrast outline-none focus:border-primary transition-colors"
                 placeholder="+506 8888-8888"
               />
+            </div>
+
+            <div>
+              <span className="block text-contrast font-medium mb-1.5">¿Sobre qué nos escribes?</span>
+              <p className="text-contrast-soft text-sm mb-3">Selecciona una opción para dirigir tu mensaje al equipo correcto.</p>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5">
+                {["Comercial", "Soporte", "Proyectos"].map((area) => (
+                  <label
+                    key={area}
+                    className={`flex-1 flex items-center gap-3 border rounded-md px-4 py-2.5 cursor-pointer transition-colors sm:justify-center ${
+                      form.area === area
+                        ? "border-primary bg-primary/10"
+                        : "border-border bg-background hover:border-primary/50"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="area"
+                      value={area}
+                      required
+                      checked={form.area === area}
+                      onChange={handleChange}
+                      className="accent-primary w-4 h-4 cursor-pointer"
+                    />
+                    <span className={`text-contrast ${form.area === area ? "font-semibold" : ""}`}>{area}</span>
+                  </label>
+                ))}
+              </div>
             </div>
 
             <div>
@@ -197,11 +233,11 @@ const Contactanos = () => {
               <textarea
                 id="mensaje"
                 name="mensaje"
-                rows={5}
+                rows={4}
                 required
                 value={form.mensaje}
                 onChange={handleChange}
-                className="w-full border border-border rounded-md px-4 py-3 bg-background text-contrast outline-none focus:border-primary transition-colors resize-y"
+                className="w-full border border-border rounded-md px-4 py-2.5 bg-background text-contrast outline-none focus:border-primary transition-colors resize-y"
                 placeholder="Escribe tu mensaje..."
               />
             </div>
@@ -209,7 +245,7 @@ const Contactanos = () => {
             <button
               type="submit"
               disabled={sending}
-              className="bg-primary text-accent px-8 py-3.5 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-auto bg-primary text-accent px-8 py-3.5 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {sending ? "Enviando..." : "Enviar mensaje"}
             </button>

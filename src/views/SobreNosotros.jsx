@@ -6,9 +6,10 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import Reveal from "../components/Reveal";
-import gifTrafico from "../assets/a.gif";
-import imgIngeniero from "../assets/serviciop.png";
-import imgFabrica from "../assets/carrusel1.jpg";
+import imgQuienesSomos from "../assets/about/quienesomos.jpeg";
+import imgTalento from "../assets/about/nuestrotalento.jpeg";
+import imgCompromiso from "../assets/about/compromiso.jpeg";
+import imgCalidad from "../assets/about/calidad.jpeg";
 
 const SmallLabel = ({ text, light }) => (
   <span
@@ -41,21 +42,21 @@ const SobreNosotros = () => {
     <section id="sobre">
       {/* Sección: Trayectoria (imagen izq, fondo blanco a todo el ancho der) */}
       <div className="lg:flex lg:items-stretch">
-        <Reveal direction="right" className="lg:w-2/5">
+        <Reveal direction="right" className="lg:w-2/5 relative">
           <img
-            src={gifTrafico}
+            src={imgQuienesSomos}
             alt="Trayectoria e intersecciones viales"
-            className="w-full h-72 lg:h-full object-cover"
+            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
           />
         </Reveal>
         <div className="bg-background lg:w-3/5">
           <Inner>
-            <div className="py-16">
+            <div className="py-8 sm:py-10">
               <Reveal delay={100}>
                 <SmallLabel text="¿Quiénes Somos?" />
                 <BigTitle text="Trayectoria y Equipo de Especialistas" />
               </Reveal>
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-5">
                 <Reveal delay={200}>
                   <BodyText
                     text="Solutraffic S.A.S es una compañía Colombiana dedicada a la ingeniería de la movilidad urbana, con veinticinco años de experiencia en el mercado de productos, componentes y soluciones integrales para la gestión de esta en las ciudades."
@@ -91,21 +92,21 @@ const SobreNosotros = () => {
 
       {/* Sección: Nuestro Talento (fondo azul a todo el ancho izq, imagen der) */}
       <div className="lg:flex lg:flex-row-reverse lg:items-stretch">
-        <Reveal direction="left" className="lg:w-2/5">
+        <Reveal direction="left" className="lg:w-2/5 relative">
           <img
-            src={imgIngeniero}
+            src={imgTalento}
             alt="Nuestro talento"
-            className="w-full h-72 lg:h-full object-cover"
+            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
           />
         </Reveal>
         <div className="bg-secondary lg:w-3/5">
           <Inner>
-            <div className="py-16">
+            <div className="py-8 sm:py-10">
               <Reveal delay={100}>
                 <SmallLabel text="Nuestro Talento" light />
                 <BigTitle text="Equipo de Especialistas a tu Servicio" light />
               </Reveal>
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-5">
                 <Reveal delay={200}>
                   <BodyText
                     text="Un experimentado equipo de ingenieros y técnicos especialistas están a su servicio brindando un conocimiento excepcional en productos y soluciones para la gestión de la movilidad."
@@ -156,21 +157,21 @@ const SobreNosotros = () => {
 
       {/* Sección: Compromiso (imagen izq, fondo blanco a todo el ancho der) */}
       <div className="lg:flex lg:items-stretch">
-        <Reveal direction="right" className="lg:w-2/5">
+        <Reveal direction="right" className="lg:w-2/5 relative">
           <img
-            src={imgFabrica}
+            src={imgCompromiso}
             alt="Compromiso en planta y línea de semáforos"
-            className="w-full h-72 lg:h-full object-cover"
+            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
           />
         </Reveal>
         <div className="bg-background lg:w-3/5">
           <Inner>
-            <div className="py-16">
+            <div className="py-8 sm:py-10">
               <Reveal delay={100}>
                 <SmallLabel text="Política de Calidad" />
                 <BigTitle text="Compromiso Seguro y Sostenible" />
               </Reveal>
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-5">
                 <Reveal delay={200}>
                   <BodyText
                     text="Estamos comprometidos con la calidad, seguridad e innovación en nuestras aplicaciones y servicios para la movilidad, manteniendo siempre un trato personalizado con el cliente e involucrándolo plenamente en los proyectos que realizan."
@@ -212,23 +213,23 @@ const SobreNosotros = () => {
         </div>
       </div>
 
-      {/* Sección: Calidad y municipios (imagen izq, fondo amarillo a todo el ancho der) */}
-      <div className="lg:flex lg:items-stretch">
-        <Reveal direction="right" className="lg:w-2/5">
+      {/* Sección: Calidad y municipios (imagen der, fondo amarillo a todo el ancho izq) */}
+      <div className="lg:flex lg:flex-row-reverse lg:items-stretch">
+        <Reveal direction="left" className="lg:w-2/5 relative">
           <img
-            src={imgIngeniero}
+            src={imgCalidad}
             alt="Calidad y control de tráfico"
-            className="w-full h-72 lg:h-full object-cover"
+            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
           />
         </Reveal>
         <div className="bg-primary lg:w-3/5">
           <Inner>
-            <div className="py-16">
+            <div className="py-8 sm:py-10">
               <Reveal delay={100}>
                 <SmallLabel text="Certificaciones y Brochure" />
                 <BigTitle text="Calidad y Recursos Normados" />
               </Reveal>
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-5">
                 <Reveal delay={200}>
                   <BodyText
                     text="Todos nuestros productos y sistemas cuentan con las normas que garantizan la absoluta confiabilidad de nuestra empresa como aliado. Nuestros procesos de diseño y mantenimiento cumplen con estrictas normas de calidad, asegurando la eficiencia en la aplicación de las soluciones para cada una de sus necesidades."

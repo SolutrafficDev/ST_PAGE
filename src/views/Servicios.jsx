@@ -8,12 +8,12 @@ const Servicios = () => {
   const scrollBy = (dir) => {
     const el = scrollRef.current;
     if (!el) return;
-    const amount = Math.max(el.clientWidth * 0.5, 300);
+    const amount = Math.max(el.clientWidth / 3, 260);
     el.scrollBy({ left: dir * amount, behavior: "smooth" });
   };
 
   return (
-    <section id="servicios" className="section bg-background">
+    <section id="servicios" className="section bg-background section-flush-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left">
           <h1 className="text-h1-mobile md:text-h1 font-bold tracking-tight text-contrast mt-3">
@@ -30,7 +30,7 @@ const Servicios = () => {
           {servicios.map((servicio, index) => (
             <div
               key={servicio.id}
-              className="snap-start shrink-0 min-w-0 w-[85vw] sm:w-1/2 px-2 sm:px-3"
+              className="snap-start shrink-0 min-w-0 w-[85vw] sm:w-1/3 px-2 sm:px-3"
             >
               <ServiceCard servicio={servicio} index={index} />
             </div>
