@@ -10,6 +10,7 @@ import ServicioDetalle from "./views/ServicioDetalle";
 import ProductoDetalle from "./views/ProductoDetalle";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
+import Divider from "./components/Divider";
 import "./styles/main.css";
 
 function App() {
@@ -35,8 +36,11 @@ function App() {
             <>
               <Inicio />
               <SobreNosotros />
+              <Divider />
               <Servicios />
+              <Divider className="mb-8" />
               <Productos />
+              <Divider />
               <Contactanos />
             </>
           }

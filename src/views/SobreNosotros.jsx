@@ -3,9 +3,9 @@ import {
   FaLaptopCode,
   FaTrafficLight,
   FaRoute,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
 import Reveal from "../components/Reveal";
+import Municipios from "../components/Municipios";
 import imgQuienesSomos from "../assets/about/quienesomos.jpeg";
 import imgTalento from "../assets/about/nuestrotalento.jpeg";
 import imgCompromiso from "../assets/about/compromiso.jpeg";
@@ -36,8 +36,6 @@ const Inner = ({ children }) => (
 );
 
 const SobreNosotros = () => {
-  const municipios = [{ nombre: "Cali, Valle del Cauca" }];
-
   return (
     <section id="sobre">
       {/* Sección: Trayectoria (imagen izq, fondo blanco a todo el ancho der) */}
@@ -236,23 +234,13 @@ const SobreNosotros = () => {
                     className="block leading-relaxed"
                   />
                 </Reveal>
-                <Reveal delay={300}>
+                <Reveal delay={400}>
                   <p className="text-contrast text-body-md-mobile md:text-body-md font-semibold leading-relaxed">
                     Municipios donde hemos trabajado:
                   </p>
                 </Reveal>
-                <Reveal delay={400}>
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    {municipios.map((m) => (
-                      <span
-                        key={m.nombre}
-                        className="inline-flex items-center gap-2 bg-white shadow-md px-5 py-3 rounded-full font-semibold text-accent"
-                      >
-                        <FaMapMarkerAlt className="text-secondary" />
-                        {m.nombre}
-                      </span>
-                    ))}
-                  </div>
+                <Reveal delay={500}>
+                  <Municipios />
                 </Reveal>
               </div>
             </div>
