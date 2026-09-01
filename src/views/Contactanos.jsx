@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import SectionTitle from "../components/SectionTitle";
 import { SecondaryText, BodyText } from "../components/Typography";
 
 const Contactanos = () => {
@@ -52,12 +54,10 @@ const Contactanos = () => {
   };
 
   return (
-    <section id="contacto" className="section section-compact px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-h1-mobile md:text-h1 font-bold tracking-tight text-contrast mt-2">
-          Contáctanos
-        </h1>
+    <section id="contacto" className="section section-compact">
+      <SectionTitle className="mt-2">Contáctanos</SectionTitle>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {(sent || error) && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
@@ -120,15 +120,15 @@ const Contactanos = () => {
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-3 text-contrast-soft">
-                  <span className="text-primary text-lg">📧</span>
+                  <FaEnvelope className="text-primary text-lg shrink-0" />
                   <span>director@solutraffic.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-contrast-soft">
-                  <span className="text-primary text-lg">📞</span>
+                  <FaPhoneAlt className="text-primary text-lg shrink-0" />
                   <span>+57 318 2152340</span>
                 </div>
                 <div className="flex items-center gap-3 text-contrast-soft">
-                  <span className="text-primary text-lg">📍</span>
+                  <FaMapMarkerAlt className="text-primary text-lg shrink-0" />
                   <span>Cali, Colombia</span>
                 </div>
               </div>

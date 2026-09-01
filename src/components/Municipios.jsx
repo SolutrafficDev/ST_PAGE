@@ -1,24 +1,43 @@
 import { useState, useEffect, useRef } from "react";
 
 const ciudades = [
+  { nombre: "Bucaramanga", pais: "Colombia" },
   { nombre: "Cali", pais: "Colombia" },
   { nombre: "Candelaria", pais: "Colombia" },
-  { nombre: "Palmira", pais: "Colombia" },
+  { nombre: "Dosquebradas", pais: "Colombia" },
+  { nombre: "Garzón", pais: "Colombia" },
+  { nombre: "Girardot", pais: "Colombia" },
+  { nombre: "Jamundí", pais: "Colombia" },
   { nombre: "Medellín", pais: "Colombia" },
-  { nombre: "Cali", pais: "Colombia" },
-  { nombre: "Candelaria", pais: "Colombia" },
   { nombre: "Palmira", pais: "Colombia" },
-  { nombre: "Medellín", pais: "Colombia" },
+  { nombre: "Pereira", pais: "Colombia" },
+  { nombre: "Puerto Asís", pais: "Colombia" },
+  { nombre: "Quibdó", pais: "Colombia" },
+  { nombre: "Santa Marta", pais: "Colombia" },
+  { nombre: "Tauramena", pais: "Colombia" },
+  { nombre: "Tuluá", pais: "Colombia" },
+  { nombre: "Tumaco", pais: "Colombia" },
+  { nombre: "Tunja", pais: "Colombia" },
 ];
 
 const perPage = 4;
 const pages = Math.ceil(ciudades.length / perPage);
 
+const fontSizeFor = (nombre) => {
+  const len = nombre.length;
+  if (len <= 8) return "text-2xl";
+  if (len <= 11) return "text-xl";
+  if (len <= 14) return "text-lg";
+  return "text-base";
+};
+
 const CityCard = ({ ciudad }) => (
   <div className="relative bg-secondary p-3 pt-6 pb-2 flex flex-col items-center justify-center min-h-[5rem] rounded-xl">
     <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t-2 border-l-2 border-white rounded-tl-lg" />
     <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b-2 border-r-2 border-white rounded-br-lg" />
-    <span className="text-2xl font-bold text-white text-center uppercase tracking-wide">
+    <span
+      className={`${fontSizeFor(ciudad.nombre)} font-bold text-white text-center uppercase leading-tight tracking-wide`}
+    >
       {ciudad.nombre}
     </span>
     <span className="self-end text-xs font-light text-white/80 mt-0.5 pr-1">
