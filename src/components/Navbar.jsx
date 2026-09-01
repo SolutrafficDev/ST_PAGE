@@ -64,6 +64,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
 
+  const pathSection = isHome
+    ? null
+    : location.pathname.startsWith("/productos")
+    ? "productos"
+    : location.pathname.startsWith("/servicios")
+    ? "servicios"
+    : "inicio";
+
+  const currentActive = pathSection ?? activeSection;
+
   const navItems = [
     { id: "inicio", text: "Inicio" },
     { id: "sobre", text: "Sobre Nosotros" },
@@ -87,7 +97,7 @@ const Navbar = () => {
           <button
             key={item.id}
             onClick={() => handleNavClick(item.id)}
-            className={`navbar-button ${activeSection === item.id ? "active" : ""}`}
+            className={`navbar-button ${currentActive === item.id ? "active" : ""}`}
             data-section={item.id}
           >
             <BodyText

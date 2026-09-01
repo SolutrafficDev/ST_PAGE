@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import ServiceCard from "../components/ServiceCard";
+import SectionTitle from "../components/SectionTitle";
 import servicios from "../data/servicios";
 
 const Servicios = () => {
@@ -14,15 +15,9 @@ const Servicios = () => {
 
   return (
     <section id="servicios" className="section bg-background section-flush-bottom">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left">
-          <h1 className="text-h1-mobile md:text-h1 font-bold tracking-tight text-contrast mt-3">
-            Servicios
-          </h1>
-        </div>
-      </div>
+      <SectionTitle className="mt-3">Servicios</SectionTitle>
 
-      <div className="relative mt-8">
+      <div className="relative mt-4">
         <div
           ref={scrollRef}
           className="flex overflow-x-auto px-2 sm:px-4 pb-4 snap-x snap-mandatory no-scrollbar items-stretch"
