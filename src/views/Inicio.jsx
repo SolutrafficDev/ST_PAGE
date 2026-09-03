@@ -32,7 +32,7 @@ const Inicio = () => {
             style={{ position: "absolute", inset: 0 }}
           />
         ))}
-        <div className="absolute inset-0 bg-black/75 z-[1]" />
+        <div className="absolute inset-0 bg-black/55 z-[1]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] flex flex-col items-center gap-5 px-4">
           <img
             src={logos.lightGrayFullt}
