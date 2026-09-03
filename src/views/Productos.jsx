@@ -41,11 +41,11 @@ const Productos = () => {
   const numTotal = `0${total}`.slice(-2);
 
   return (
-    <section id="productos" className="section section-compact bg-secondary">
-      <SectionTitle className="mt-2" light>Productos</SectionTitle>
+    <section id="productos" className="section section-compact">
+      <SectionTitle className="mt-2">Productos</SectionTitle>
 
       <div className="relative mt-6 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-foreground shadow-xl">
+        <div className="relative overflow-hidden rounded-2xl bg-secondary shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="relative flex flex-col justify-center p-6 sm:p-10 lg:p-12">
               <button
@@ -62,10 +62,10 @@ const Productos = () => {
                 <p className="text-xs font-semibold tracking-widest uppercase text-primary">
                   {num} / {numTotal}
                 </p>
-                <h3 className="mt-4 text-h4-mobile md:text-h4 font-bold text-contrast tracking-tight line-clamp-3">
+                <h3 className="mt-4 text-h4-mobile md:text-h4 font-bold text-contrast-light tracking-tight line-clamp-3">
                   {producto.titulo}
                 </h3>
-                <p className="mt-4 text-contrast-soft leading-relaxed text-[#4A5568] line-clamp-3">
+                <p className="mt-4 text-blue-soft leading-relaxed line-clamp-3">
                   {producto.descripcionCorta}
                 </p>
                 <button
@@ -108,7 +108,7 @@ const Productos = () => {
       </div>
 
       <div className="mt-3 mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-xs h-1 rounded-full bg-white/20 overflow-hidden">
+        <div className="w-full max-w-xs h-1 rounded-full bg-black/10 overflow-hidden">
           <div
             className="h-full bg-primary transition-all duration-500"
             style={{ width: `${((current + 1) / total) * 100}%` }}

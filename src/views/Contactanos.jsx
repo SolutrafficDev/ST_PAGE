@@ -195,18 +195,18 @@ const Contactanos = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4 bg-foreground p-5 rounded-lg shadow-sm">
+          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4 bg-secondary p-5 sm:p-7 rounded-xl shadow-lg">
             <div>
-              <span className="block text-contrast font-medium mb-1.5">¿Sobre qué nos escribes?</span>
-              <p className="text-contrast-soft text-sm mb-3">Selecciona una opción para dirigir tu mensaje al equipo correcto.</p>
+              <span className="block text-contrast-light font-medium mb-1.5">¿Sobre qué nos escribes?</span>
+              <p className="text-blue-soft text-sm mb-3">Selecciona una opción para dirigir tu mensaje al equipo correcto.</p>
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5">
                 {["Proyectos", "Comercial", "Soporte"].map((area) => (
                   <label
                     key={area}
                     className={`flex-1 flex items-center gap-3 border rounded-md px-4 py-2.5 cursor-pointer transition-colors sm:justify-center ${
                       form.area === area
-                        ? "border-primary bg-primary/10"
-                        : "border-border bg-background hover:border-primary/50"
+                        ? "border-primary bg-primary/20"
+                        : "border-white/30 hover:border-primary/60"
                     }`}
                   >
                     <input
@@ -218,7 +218,7 @@ const Contactanos = () => {
                       onChange={handleChange}
                       className="accent-primary w-4 h-4 cursor-pointer"
                     />
-                    <span className={`text-contrast ${form.area === area ? "font-semibold" : ""}`}>{area}</span>
+                    <span className={`text-contrast-light ${form.area === area ? "font-semibold" : ""}`}>{area}</span>
                   </label>
                 ))}
               </div>
@@ -227,7 +227,7 @@ const Contactanos = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="nombre" className="block text-contrast font-medium mb-1.5">
+                <label htmlFor="nombre" className="block text-contrast-light font-medium mb-1.5">
                   Nombre
                 </label>
                 <input
@@ -247,7 +247,7 @@ const Contactanos = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-contrast font-medium mb-1.5">
+                <label htmlFor="email" className="block text-contrast-light font-medium mb-1.5">
                   Correo electrónico
                 </label>
                 <input
@@ -268,7 +268,7 @@ const Contactanos = () => {
             </div>
 
             <div>
-              <label htmlFor="telefono" className="block text-contrast font-medium mb-1.5">
+              <label htmlFor="telefono" className="block text-contrast-light font-medium mb-1.5">
                 Teléfono
               </label>
               <input
@@ -288,7 +288,7 @@ const Contactanos = () => {
             </div>
 
             <div>
-              <label htmlFor="mensaje" className="block text-contrast font-medium mb-1.5">
+              <label htmlFor="mensaje" className="block text-contrast-light font-medium mb-1.5">
                 Mensaje
               </label>
               <textarea
@@ -310,7 +310,7 @@ const Contactanos = () => {
             <button
               type="submit"
               disabled={sending}
-              className="mt-auto bg-primary text-accent px-8 py-3.5 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-secondary hover:text-primary text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-auto bg-primary text-accent px-8 py-3.5 rounded font-semibold cursor-pointer transition-all duration-200 hover:bg-accent hover:text-primary text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {sending ? "Enviando..." : "Enviar mensaje"}
             </button>
