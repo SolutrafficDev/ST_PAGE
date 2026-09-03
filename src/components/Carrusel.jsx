@@ -8,19 +8,27 @@ const Carrusel = ({ slides }) => {
   const prev = () => setCurrent((c) => (c === 0 ? slides.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1));
 
+  const slide = slides[current];
+  const textos = slide.textos ?? (slide.texto ? [slide.texto] : []);
+
   return (
     <div className="relative w-full overflow-hidden rounded-2xl bg-white shadow-lg">
       <div className="relative h-[500px] md:h-[650px]">
         <img
-          src={slides[current].img}
+          src={slide.img}
           alt={`Slide ${current + 1}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-          <p className="text-white text-body-md-mobile md:text-body-md leading-relaxed max-w-3xl">
-            {slides[current].texto}
-          </p>
+          <div className="space-y-3 max-w-3xl">
+            {textos.map((texto, i) => (
+              <p key={i} className="text-white flex gap-3 text-body-md-mobile md:text-body-md leading-relaxed">
+                <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-primary" />
+                <span>{texto}</span>
+              </p>
+            ))}
+          </div>
         </div>
       </div>
 

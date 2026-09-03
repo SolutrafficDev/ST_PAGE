@@ -1,9 +1,9 @@
 import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import serviciop from "../../assets/products/9/main.png";
+import carrusel1 from "../../assets/products/9/1.png";
+import carrusel2 from "../../assets/products/9/2.jpeg";
+import carrusel3 from "../../assets/products/9/3.jpeg";
+import carrusel4 from "../../assets/products/9/4.jpeg";
 
 const producto = {
   id: "baliza-inteligente-peatones-bip-100",
@@ -16,11 +16,12 @@ const producto = {
     "Dispositivo de seguridad vial tipo bolardo, diseñado para instalarse en los extremos de los pasos peatonales y advertir de forma activa a peatones y conductores mediante señales luminosas, acústicas y mensajes de voz. Detecta la presencia de peatones por infrarrojos y, en función del estado del semáforo asociado, emite avisos preventivos que orientan al peatón sobre el momento seguro para cruzar y alertan a los conductores. Opera de forma continua y se despliega en pares por paso peatonal bajo una arquitectura maestro–esclavo.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3, carrusel4],
   caracteristicas: [
-    { img: carrusel1, texto: "Sensor infrarrojo pasivo (PIR) con umbral de sensibilidad configurable para detección de peatones." },
-    { img: carrusel2, texto: "Indicación luminosa LED de alto brillo con iconos/mensajes que refuerza la visibilidad del cruce de noche." },
-    { img: carrusel3, texto: "Aviso acústico y de voz con altavoz resistente al agua; volumen e intervalos configurables." },
-    { img: carrusel4, texto: "Arquitectura maestro–esclavo con instalación en pares, sincronizable con el controlador de la intersección." },
+    "Sensor infrarrojo pasivo (PIR) con umbral de sensibilidad configurable para detección de peatones.",
+    "Indicación luminosa LED de alto brillo con iconos/mensajes que refuerza la visibilidad del cruce de noche.",
+    "Aviso acústico y de voz con altavoz resistente al agua; volumen e intervalos configurables.",
+    "Arquitectura maestro–esclavo con instalación en pares, sincronizable con el controlador de la intersección.",
   ],
   fichaTecnica: [
     {

@@ -1,9 +1,8 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/3/3p.gif";
+import serviciop from "../../assets/products/3/3main.png";
+import carrusel1 from "../../assets/products/3/3c1.png";
+import carrusel2 from "../../assets/products/3/3c2.png";
+
 
 const producto = {
   id: "semaforo-peatonal",
@@ -16,11 +15,12 @@ const producto = {
     "El semáforo peatonal de bajo consumo está compuesto por dos unidades: la unidad de figura peatonal roja (indicación de 'alto') y la unidad de figura peatonal verde (indicación de 'cruce'). El núcleo de cada lámpara está formado por el panel de luz, la lente óptica, la fuente de alimentación, el casquillo y demás componentes estructurales. El equipo es apto para su instalación en intersecciones semaforizadas destinadas a cruces peatonales, y se ofrece en dos tamaños de superficie emisora de luz (LED): 200 mm y 300 mm, según el modelo. En el modelo RX200-3-FM21 la figura verde es dinámica (peatón en movimiento); en el modelo RX300-3-FM21 la figura verde es estática.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2],
   caracteristicas: [
-    { img: carrusel1, texto: "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel." },
-    { img: carrusel2, texto: "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético." },
-    { img: carrusel3, texto: "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento." },
-    { img: carrusel4, texto: "Compatibilidad electromagnética con distorsión armónica total inferior al 10 %, reduciendo interferencias con la red eléctrica y otros equipos de la intersección." },
+    "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel.",
+    "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético.",
+    "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento.",
+    "Compatibilidad electromagnética con distorsión armónica total inferior al 10 %, reduciendo interferencias con la red eléctrica y otros equipos de la intersección.",
   ],
   fichaTecnica: [
     {
