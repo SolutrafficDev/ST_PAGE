@@ -1,9 +1,9 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/5/5.gif";
+import serviciop from "../../assets/products/8/main.png";
+import carrusel1 from "../../assets/products/8/1.jpeg";
+import carrusel2 from "../../assets/products/8/2.jpeg";
+import carrusel3 from "../../assets/products/8/3.jpeg";
+import carrusel4 from "../../assets/products/8/4.jpeg";
 
 const producto = {
   id: "controlador-semafonico-mtix-8g",
@@ -16,11 +16,12 @@ const producto = {
     "Controlador electrónico de alta confiabilidad para la gestión de intersecciones urbanas mediante el control de hasta ocho (8) grupos semafóricos independientes y configurables. Su arquitectura modular y escalable cubre desde intersecciones de cuatro accesos hasta escenarios complejos con giros exclusivos, pasos peatonales y ciclovías. Incorpora procesamiento embebido con microprocesadores redundantes, memoria no volátil para la conservación de planes y parámetros, y mecanismos de seguridad funcional con recuperación automática que restablecen la operación tras eventos de falla, conforme a la normativa colombiana vigente.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3, carrusel4],
   caracteristicas: [
-    { img: carrusel1, texto: "8 grupos semafóricos independientes configurables por software, con 24 salidas AC y hasta 99 planes almacenables." },
-    { img: carrusel2, texto: "CPU ARM Cortex-A7 con RTOS y microprocesadores redundantes para operación crítica con recuperación automática." },
-    { img: carrusel3, texto: "Múltiples comunicaciones: RS-232, RS-485, Ethernet RJ-45, 4G/LTE opcional y GPS opcional." },
-    { img: carrusel4, texto: "Monitor de conflictos independiente con paso a destello amarillo o rojo de emergencia ante estados incompatibles." },
+    "8 grupos semafóricos independientes configurables por software, con 24 salidas AC y hasta 99 planes almacenables.",
+    "CPU ARM Cortex-A7 con RTOS y microprocesadores redundantes para operación crítica con recuperación automática.",
+    "Múltiples comunicaciones: RS-232, RS-485, Ethernet RJ-45, 4G/LTE opcional y GPS opcional.",
+    "Monitor de conflictos independiente con paso a destello amarillo o rojo de emergencia ante estados incompatibles.",
   ],
   fichaTecnica: [
     {

@@ -1,9 +1,8 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/1/1p.gif";
+import serviciop from "../../assets/products/1/1main.png";
+import carrusel1 from "../../assets/products/1/1c1.jpeg";
+import carrusel2 from "../../assets/products/1/1c2.jpeg";
+import carrusel3 from "../../assets/products/1/1c3.jpeg";
 import {
   FaBolt, FaWifi, FaShieldAlt,
   FaSolarPanel, FaBatteryFull, FaRuler,
@@ -19,11 +18,12 @@ const producto = {
     "Sistema fotovoltaico autónomo de 12 VDC diseñado para la alimentación de controladores semafóricos M-TIX y equipos ITS, equipado con estructura para dos módulos solares montada sobre poste. Incorpora tecnología de carga MPPT de alta eficiencia, banco de baterías para almacenamiento de energía y operación continua bajo diversas condiciones climáticas y ambientales presentes en el territorio colombiano, incluyendo zonas de alta radiación solar, ambientes húmedos, lluvias intensas, variaciones de temperatura y condiciones costeras.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3],
   caracteristicas: [
-    { img: carrusel1, texto: "Seguimiento MPPT de alta eficiencia (>98%) con detección automática de batería y carga adaptativa." },
-    { img: carrusel2, texto: "Aplicable a todas las regiones de Colombia, incluyendo zonas costeras y de alta radiación solar." },
-    { img: carrusel3, texto: "Monitoreo y configuración por conexión inalámbrica / VRM con autonomía nocturna y operación en días nublados." },
-    { img: carrusel4, texto: "Mantenimiento sencillo con tornillería anticorrosión y estructura de aluminio anodizado 6005-T5." },
+    "Seguimiento MPPT de alta eficiencia (>98%) con detección automática de batería y carga adaptativa.",
+    "Aplicable a todas las regiones de Colombia, incluyendo zonas costeras y de alta radiación solar.",
+    "Monitoreo y configuración por conexión inalámbrica / VRM con autonomía nocturna y operación en días nublados.",
+    "Mantenimiento sencillo con tornillería anticorrosión y estructura de aluminio anodizado 6005-T5.",
   ],
   especificaciones: [
     { icon: FaSolarPanel, label: "Estructura de soporte", value: "Aluminio anodizado 6005-T5, tornillería acero inoxidable A2-70/304, soporta viento hasta 60 m/s (216 km/h)." },
