@@ -1,4 +1,4 @@
-import gifEjemplo from "../../assets/products/5/5.gif";
+import gifEjemplo from "../../assets/products/8/main.png";
 import serviciop from "../../assets/products/8/main.png";
 import carrusel1 from "../../assets/products/8/1.jpeg";
 import carrusel2 from "../../assets/products/8/2.jpeg";
