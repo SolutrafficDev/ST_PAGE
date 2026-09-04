@@ -9,19 +9,19 @@ const Contactanos = () => {
       title: "¿Quieres una cotización?",
       text: "Solicita una cotización para nuestros semáforos, controladores y soluciones de movilidad. Te enviaremos una propuesta a la medida de tu ciudad o empresa.",
       email: "asistenteadmonycompras@solutraffic.com",
-      phone: "+57 318 2152340",
+      phone: "+57 300 7030061",
     },
     Soporte: {
       title: "¿Necesitas soporte técnico?",
       text: "¿Tienes dudas o necesitas asistencia con alguno de nuestros productos, tu instalación o tus equipos? Escríbenos y nuestro equipo de soporte técnico te atenderá con gusto lo antes posible.",
       email: "soporte@solutraffic.com",
-      phone: "+57 318 2152340",
+      phone: "+57 300 7030061",
     },
     Proyectos: {
       title: "Hablemos de tu proyecto",
       text: "Estamos listos para ayudarte a resolver los desafíos de movilidad de tu ciudad o empresa. Cuéntanos más sobre lo que necesitas y te daremos una solución a la medida.",
       email: "licitaciones@solutraffic.com",
-      phone: "+57 318 2152340",
+      phone: "+57 317 3835185",
     },
   };
 
@@ -30,6 +30,12 @@ const Contactanos = () => {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+
+  const emailConfig = {
+    Comercial: { template_id: "template_iqovkbt" },
+    Proyectos: { template_id: "template_iqovkbt" },
+    Soporte: { template_id: "template_iqovkbt" },
+  };
 
   const info = areaInfo[form.area] || areaInfo.Proyectos;
 
@@ -40,10 +46,6 @@ const Contactanos = () => {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
       errs.email = "Ingresa un correo electrónico válido.";
     if (!values.telefono.trim()) errs.telefono = "Este campo es obligatorio.";
-    else if (!/^\+57\d{10}$/.test(values.telefono.replace(/\s/g, "")))
-      errs.telefono = "Ingresa el código +57 y 10 dígitos.";
-    else if (!/^\d+$/.test(values.telefono.replace(/[+\s]/g, "")))
-      errs.telefono = "Solo se permiten números.";
     if (!values.area) errs.area = "Selecciona una opción.";
     if (!values.mensaje.trim()) errs.mensaje = "Este campo es obligatorio.";
     return errs;
@@ -71,7 +73,7 @@ const Contactanos = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           service_id: "service_8oz9109",
-          template_id: "template_iqovkbt",
+          template_id: (emailConfig[form.area] || emailConfig.Comercial).template_id,
           user_id: "0CzDTy1_EbNPtX5xt",
           accessToken: "sn8zU0Hu14L0ViYfFrpYm",
           template_params: {
