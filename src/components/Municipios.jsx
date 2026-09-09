@@ -32,17 +32,26 @@ const fontSizeFor = (nombre) => {
 };
 
 const CityCard = ({ ciudad }) => (
-  <div className="relative bg-secondary p-3 pt-6 pb-2 flex flex-col items-center justify-center min-h-[5rem] rounded-xl">
+  <div className="relative bg-secondary p-3 flex flex-col items-center rounded-xl h-full">
     <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t-2 border-l-2 border-white rounded-tl-lg" />
     <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b-2 border-r-2 border-white rounded-br-lg" />
-    <span
-      className={`${fontSizeFor(ciudad.nombre)} font-bold text-white text-center uppercase leading-tight tracking-wide`}
-    >
-      {ciudad.nombre}
-    </span>
-    <span className="self-end text-xs font-light text-white/80 mt-0.5 pr-1">
+    <div className="w-full min-h-[3.75rem] flex items-center justify-center">
+      <span
+        className={`${fontSizeFor(ciudad.nombre)} font-bold text-white text-center uppercase leading-tight tracking-wide`}
+      >
+        {ciudad.nombre}
+      </span>
+    </div>
+    <div className="self-end text-xs font-light text-white/80 mt-0.5 pr-1 leading-4">
       {ciudad.pais}
-    </span>
+    </div>
+  </div>
+);
+
+const CityCardPlaceholder = () => (
+  <div className="invisible relative bg-secondary p-3 flex flex-col items-center rounded-xl h-full">
+    <div className="w-full min-h-[3.75rem] flex items-center justify-center" />
+    <div className="self-end text-xs font-light mt-0.5 pr-1 leading-4"> </div>
   </div>
 );
 
@@ -81,17 +90,23 @@ const Municipios = () => {
   };
 
   const visible = ciudades.slice(index * perPage, index * perPage + perPage);
+  const cells = Array.from({ length: perPage }, (_, i) => {
+    const c = visible[i];
+    return c ? (
+      <CityCard key={c.nombre} ciudad={c} />
+    ) : (
+      <CityCardPlaceholder key={`placeholder-${index}-${i}`} />
+    );
+  });
 
   return (
     <div className="mt-6">
       <div
-        className={`grid grid-cols-2 sm:grid-cols-4 gap-3 transition-opacity duration-350 ${
+        className={`grid grid-cols-2 sm:grid-cols-4 gap-3 auto-rows-fr transition-opacity duration-350 ${
           fade ? "opacity-100" : "opacity-0"
         }`}
       >
-        {visible.map((c) => (
-          <CityCard key={c.nombre} ciudad={c} />
-        ))}
+        {cells}
       </div>
 
       <div className="mt-5 flex justify-center items-center gap-2">

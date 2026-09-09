@@ -11,6 +11,7 @@ import ServicioDetalle from "./views/ServicioDetalle";
 import ProductoDetalle from "./views/ProductoDetalle";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
+import BackToTopButton from "./components/BackToTopButton";
 import "./styles/main.css";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       </Routes>
       <Footer />
       <WhatsappButton />
+      <BackToTopButton />
     </>
   );
 }
