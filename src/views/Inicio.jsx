@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 import gif1 from "../assets/inicio/1.gif";
 import gif2 from "../assets/inicio/2.gif";
 import gif3 from "../assets/inicio/3.gif";
@@ -11,18 +10,6 @@ const gifs = [gif1, gif2, gif3, gif4, gif5];
 
 const Inicio = () => {
   const [index, setIndex] = useState(0);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleContactClick = () => {
-    if (location.pathname === "/") {
-      document
-        .getElementById("contacto")
-        ?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/#contacto");
-    }
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
