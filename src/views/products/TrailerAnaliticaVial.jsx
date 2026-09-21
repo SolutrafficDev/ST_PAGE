@@ -1,9 +1,8 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/4/1.gif";
+import serviciop from "../../assets/products/4/4main.png";
+import carrusel1 from "../../assets/products/4/1.jpeg";
+import carrusel2 from "../../assets/products/4/2.jpeg";
+import carrusel3 from "../../assets/products/4/3.jpeg";
 
 const producto = {
   id: "trailer-analitica-vial",
@@ -16,11 +15,12 @@ const producto = {
     "Plataforma móvil autónoma diseñada para la captura masiva, el procesamiento local (Edge Computing) y la transmisión remota de datos de tránsito vehicular y peatonal mediante inteligencia artificial, sin dependencia de infraestructura eléctrica o de comunicaciones permanente. Integra un chasis remolcable de un eje, gabinetes herméticos de aluminio diamantado, mástil telescópico de 9 m, sistema óptico de tres cámaras y enlace satelital, lo que permite el despliegue rápido de estudios de movilidad en entornos urbanos, rurales o remotos.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3],
   caracteristicas: [
-    { img: carrusel1, texto: "Procesamiento local en tiempo real (Edge Computing) con NVIDIA Jetson para detección, conteo y clasificación vehicular multiclase." },
-    { img: carrusel2, texto: "Sistema de energía híbrido con inversor UPS de 1 kVA y banco de baterías de ciclo profundo para operación autónoma sin red eléctrica." },
-    { img: carrusel3, texto: "Enlace satelital Starlink integrado para transmisión de datos desde cualquier punto urbano, rural o remoto sin depender de redes celulares." },
-    { img: carrusel4, texto: "Mástil telescópico de 9 m con sistema óptico de tres cámaras IP (PTZ + bala) para cobertura panorámica sin puntos ciegos." },
+    "Procesamiento local en tiempo real (Edge Computing) con NVIDIA Jetson para detección, conteo y clasificación vehicular multiclase.",
+    "Sistema de energía híbrido con inversor UPS de 1 kVA y banco de baterías de ciclo profundo para operación autónoma sin red eléctrica.",
+    "Enlace satelital Starlink integrado para transmisión de datos desde cualquier punto urbano, rural o remoto sin depender de redes celulares.",
+    "Mástil telescópico de 9 m con sistema óptico de tres cámaras IP (PTZ + bala) para cobertura panorámica sin puntos ciegos.",
   ],
   fichaTecnica: [
     {

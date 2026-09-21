@@ -1,9 +1,9 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/7/1.gif";
+import serviciop from "../../assets/products/7/main.jpeg";
+import carrusel1 from "../../assets/products/7/1.png";
+import carrusel2 from "../../assets/products/7/2.png";
+import carrusel3 from "../../assets/products/7/3.png";
+import carrusel4 from "../../assets/products/7/4.png";
 
 const producto = {
   id: "sim-sistema-integral-monitoreo",
@@ -16,11 +16,12 @@ const producto = {
     "Aplicación de escritorio desarrollada por Solutraffic para optimizar la programación, supervisión y gestión de los controladores de tráfico. Mediante una interfaz intuitiva permite conectarse directamente al controlador, monitorear su estado en tiempo real y crear, editar y cargar planes de tráfico, tanto en operación local como coordinada. Está orientada a operadores de campo y de sala de control, facilitando un manejo preciso de los dispositivos conectados sin depender de infraestructura permanente.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3, carrusel4],
   caracteristicas: [
-    { img: carrusel1, texto: "Monitoreo en tiempo real del estado del controlador: fecha/hora, conexión a central, estado del cruce y plan activo." },
-    { img: carrusel2, texto: "Creación y edición de planes semafóricos con tiempos de verde/amarillo/rojo y línea de tiempo del ciclo." },
-    { img: carrusel3, texto: "Configuración de verdes amigos, grupos vehiculares y peatonales, y horarios por franja y día de la semana." },
-    { img: carrusel4, texto: "Conexión inalámbrica WiFi al controlador con validación de configuración antes de cargar y programación remota." },
+    "Monitoreo en tiempo real del estado del controlador: fecha/hora, conexión a central, estado del cruce y plan activo.",
+    "Creación y edición de planes semafóricos con tiempos de verde/amarillo/rojo y línea de tiempo del ciclo.",
+    "Configuración de verdes amigos, grupos vehiculares y peatonales, y horarios por franja y día de la semana.",
+    "Conexión inalámbrica WiFi al controlador con validación de configuración antes de cargar y programación remota.",
   ],
   fichaTecnica: [
     {

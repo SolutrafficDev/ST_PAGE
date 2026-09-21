@@ -1,9 +1,7 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/4/1.gif";
+import serviciop from "../../assets/products/6/main.png";
+import carrusel1 from "../../assets/products/6/1.jpeg";
+import carrusel2 from "../../assets/products/6/2.jpeg";
 
 const producto = {
   id: "unidad-analitica-vial-fija",
@@ -16,11 +14,12 @@ const producto = {
     "Solución tecnológica de instalación permanente sobre postes de infraestructura vial, diseñada para la captura, el procesamiento local y la transmisión de información de tránsito mediante inteligencia artificial y visión computacional. Integra una cámara IP de analítica, una plataforma de procesamiento NVIDIA Jetson, comunicaciones satelitales Starlink y un gabinete plástico para intemperie. Permite el monitoreo de tráfico, el conteo y la clasificación vehicular, la generación de estadísticas de movilidad y la compartición de conectividad con controladores semafóricos u otros equipos autorizados de la intersección.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2],
   caracteristicas: [
-    { img: carrusel1, texto: "Procesamiento local en tiempo real (Edge Computing) con NVIDIA Jetson para conteo, clasificación vehicular y detección de eventos." },
-    { img: carrusel2, texto: "Cámara IP de analítica con captura de video en tiempo real, orientación y ángulo configurables según el proyecto." },
-    { img: carrusel3, texto: "Antena satelital Starlink integrada para transmisión de datos y acceso remoto, sin dependencia de redes celulares." },
-    { img: carrusel4, texto: "Comparte conectividad Starlink con controladores semafóricos y otros equipos autorizados de la intersección." },
+    "Procesamiento local en tiempo real (Edge Computing) con NVIDIA Jetson para conteo, clasificación vehicular y detección de eventos.",
+    "Cámara IP de analítica con captura de video en tiempo real, orientación y ángulo configurables según el proyecto.",
+    "Antena satelital Starlink integrada para transmisión de datos y acceso remoto, sin dependencia de redes celulares.",
+    "Comparte conectividad Starlink con controladores semafóricos y otros equipos autorizados de la intersección.",
   ],
   fichaTecnica: [
     {

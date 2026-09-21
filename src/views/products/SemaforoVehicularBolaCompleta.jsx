@@ -1,9 +1,7 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/2/2p.gif";
+import serviciop from "../../assets/products/2/2main.png";
+import carrusel1 from "../../assets/products/2/2c1.png";
+import carrusel2 from "../../assets/products/2/2c2.png";
 
 const producto = {
   id: "semaforo-vehicular-bola-completa",
@@ -16,11 +14,12 @@ const producto = {
     "El semáforo vehicular de bola completa roja/amarilla/verde de bajo consumo con temporizador de cuenta regresiva está compuesto por tres unidades ópticas independientes. Las unidades de bola completa roja y verde integran panel de luz, lente óptica, módulo de alimentación y carcasa de lámpara. La unidad de bola completa amarilla incorpora, adicionalmente, la función de cuenta regresiva y está compuesta por un panel de luz de cuenta regresiva, lente óptica, placa de control y carcasa de lámpara. El equipo está diseñado para su instalación en intersecciones semaforizadas de diversa configuración vial, y se ofrece en tres tamaños de superficie emisora de luz (LED): 200 mm, 300 mm y 400 mm, según el modelo.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2],
   caracteristicas: [
-    { img: carrusel1, texto: "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel." },
-    { img: carrusel2, texto: "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético." },
-    { img: carrusel3, texto: "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento." },
-    { img: carrusel4, texto: "El temporizador de cuenta regresiva admite tres modos de funcionamiento adaptativos — modo de comunicación, modo de activación y modo de aprendizaje —, compatible con más del 99 % de los controladores de semáforos del mercado." },
+    "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel.",
+    "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético.",
+    "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento.",
+    "El temporizador de cuenta regresiva admite tres modos de funcionamiento adaptativos — modo de comunicación, modo de activación y modo de aprendizaje —, compatible con más del 99 % de los controladores de semáforos del mercado.",
   ],
   fichaTecnica: [
     {

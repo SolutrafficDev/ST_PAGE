@@ -181,23 +181,32 @@ const ServicioDetalle = () => {
               className="mb-6"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {servicio.serviciosRelacionados.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm"
-                >
-                  <div className="sm:w-24 sm:flex-shrink-0">
-                    <img
-                      src={item.img ?? item.imagen}
-                      alt={item.texto}
-                      className="w-full h-16 object-cover rounded-lg"
-                    />
+              {servicio.serviciosRelacionados.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={i}
+                    className="flex items-start gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm"
+                  >
+                    {Icon ? (
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="text-primary text-lg" />
+                      </div>
+                    ) : (
+                      <div className="sm:w-24 sm:flex-shrink-0">
+                        <img
+                          src={item.img ?? item.imagen}
+                          alt={item.texto}
+                          className="w-full h-16 object-cover rounded-lg"
+                        />
+                      </div>
+                    )}
+                    <p className="text-contrast text-body-md-mobile md:text-body-md leading-relaxed">
+                      {item.texto}
+                    </p>
                   </div>
-                  <p className="text-contrast text-body-md-mobile md:text-body-md leading-relaxed">
-                    {item.texto}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         )}

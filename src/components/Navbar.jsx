@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/navbar.css";
 import { BodyText } from "./Typography";
 import { logos } from "../assets/logos";
@@ -7,6 +8,7 @@ import { logos } from "../assets/logos";
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
   const [visible, setVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -20,6 +22,7 @@ const Navbar = () => {
   };
 
   const handleNavClick = (id) => {
+    setMenuOpen(false);
     if (isHome) {
       scrollToSection(id);
     } else {
@@ -46,7 +49,7 @@ const Navbar = () => {
       lastScrollY = currentScrollY;
 
       if (!isHome) return;
-      const sections = ["inicio", "sobre", "servicios", "productos", "contacto"];
+      const sections = ["inicio", "sobre", "productos", "servicios", "compromiso", "contacto"];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -77,10 +80,15 @@ const Navbar = () => {
   const navItems = [
     { id: "inicio", text: "Inicio" },
     { id: "sobre", text: "Sobre Nosotros" },
-    { id: "servicios", text: "Servicios" },
     { id: "productos", text: "Productos" },
+    { id: "servicios", text: "Servicios" },
+    { id: "compromiso", text: "Compromiso Social" },
     { id: "contacto", text: "Contáctanos" },
   ];
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   return (
     <nav className={`navbar ${!visible ? "navbar--hidden" : ""}`}>
@@ -88,7 +96,12 @@ const Navbar = () => {
         <img
           src={logos.lightGrayFullt}
           alt="SolutrafficCra Logo"
-          className="navbar-logo"
+          className="navbar-logo navbar-logo--desktop"
+        />
+        <img
+          src={logos.lightGraySm}
+          alt="SolutrafficCra Logo"
+          className="navbar-logo navbar-logo--mobile"
         />
       </div>
 
@@ -104,6 +117,28 @@ const Navbar = () => {
               text={item.text}
               className="text-foreground"
             />
+          </button>
+        ))}
+      </div>
+
+      <button
+        className="navbar-hamburger"
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={menuOpen}
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <div className={`navbar-menu ${menuOpen ? "navbar-menu--open" : ""}`}>
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleNavClick(item.id)}
+            className={`navbar-menu-item ${currentActive === item.id ? "active" : ""}`}
+            data-section={item.id}
+          >
+            <BodyText text={item.text} className="text-foreground" />
           </button>
         ))}
       </div>

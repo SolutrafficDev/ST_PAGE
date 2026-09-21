@@ -1,8 +1,7 @@
-const SectionTitle = ({ children, light = false, className = "" }) => {
+const SectionTitle = ({ children, light = false, className = "", stripeColor = "var(--primary)" }) => {
   const stripe = {
     height: 14,
-    backgroundImage:
-      "repeating-linear-gradient(-60deg, var(--primary) 0, var(--primary) 14px, transparent 14px, transparent 38px)",
+    backgroundImage: `repeating-linear-gradient(-60deg, ${stripeColor} 0, ${stripeColor} 14px, transparent 14px, transparent 38px)`,
   };
 
   return (

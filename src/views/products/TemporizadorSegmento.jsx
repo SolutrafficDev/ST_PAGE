@@ -1,9 +1,7 @@
-import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
-import carrusel1 from "../../assets/carrusel1.jpg";
-import carrusel2 from "../../assets/carrusel2.jpg";
-import carrusel3 from "../../assets/carrusel3.jpg";
-import carrusel4 from "../../assets/carrusel4.jpg";
+import gifEjemplo from "../../assets/products/5/5.gif";
+import serviciop from "../../assets/products/5/main.jpeg";
+import carrusel1 from "../../assets/products/5/1.png";
+import carrusel2 from "../../assets/products/5/2.png";
 
 const producto = {
   id: "temporizador-cuenta-regresiva-segmento",
@@ -16,11 +14,12 @@ const producto = {
     "El temporizador de cuenta regresiva tipo segmento (tipo núcleo) integra una pantalla LED de segmentos directamente en la carcasa de la lámpara del semáforo, mostrando el tiempo restante de fase mediante dígitos numéricos. Es apto para su instalación en diversas intersecciones de control semafórico, en reemplazo o complemento de la unidad de bola completa correspondiente. El equipo se ofrece en tres tamaños de superficie emisora de luz (LES): 200 mm, 300 mm y 400 mm, según el modelo, permitiendo su integración en semáforos de distintas dimensiones.",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2],
   caracteristicas: [
-    { img: carrusel1, texto: "Compatibilidad universal con tres modos de funcionamiento adaptativos (aprendizaje, disparo y comunicación), compatible con más del 99 % de los sistemas de control de señales." },
-    { img: carrusel2, texto: "Detección adaptativa con circuito patentado que ajusta automáticamente niveles de voltaje de entrada y filtra interferencias eléctricas externas." },
-    { img: carrusel3, texto: "Doble protección contra sobretensiones en alimentación e interfaces de comunicación, reduciendo tasas de falla y costos de mantenimiento en más del 50 %." },
-    { img: carrusel4, texto: "Configuración visual y flexible mediante sistema de control superior basado en PC; ajuste de parámetros en línea sin reemplazo de hardware." },
+    "Compatibilidad universal con tres modos de funcionamiento adaptativos (aprendizaje, disparo y comunicación), compatible con más del 99 % de los sistemas de control de señales.",
+    "Detección adaptativa con circuito patentado que ajusta automáticamente niveles de voltaje de entrada y filtra interferencias eléctricas externas.",
+    "Doble protección contra sobretensiones en alimentación e interfaces de comunicación, reduciendo tasas de falla y costos de mantenimiento en más del 50 %.",
+    "Configuración visual y flexible mediante sistema de control superior basado en PC; ajuste de parámetros en línea sin reemplazo de hardware.",
   ],
   fichaTecnica: [
     {

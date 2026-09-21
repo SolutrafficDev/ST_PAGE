@@ -16,11 +16,12 @@ const producto = {
     "El semáforo vehicular de bola completa roja/amarilla/verde de bajo consumo está compuesto por tres unidades independientes. El núcleo de cada lámpara está formado por la placa de luz, la lente óptica, el módulo de alimentación y el casquillo de la lámpara. El equipo es apto para su instalación en diversas intersecciones controladas por semáforo. A diferencia de la versión con temporizador (ST-FT-SEM-001), este modelo no incorpora la función de cuenta regresiva y se ofrece en cuatro tamaños de superficie emisora de luz (LES): 100 mm, 200 mm, 300 mm y 400 mm, según el modelo, lo que permite su uso tanto en semáforos de intersección estándar (200-400 mm) como en semáforos auxiliares o de repetición de menor tamaño (100 mm).",
   gif: gifEjemplo,
   imagen: serviciop,
+  galeria: [carrusel1, carrusel2, carrusel3, carrusel4],
   caracteristicas: [
-    { img: carrusel1, texto: "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel." },
-    { img: carrusel2, texto: "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético." },
-    { img: carrusel3, texto: "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento." },
-    { img: carrusel4, texto: "Compatibilidad electromagnética con distorsión armónica total inferior al 10 %, reduciendo interferencias con la red eléctrica y otros equipos de la intersección." },
+    "Circuito de malla que aísla automáticamente el punto de falla cuando un LED se avería, manteniendo estable el efecto de visualización general del resto del panel.",
+    "Fuente de alimentación de diseño propio con alta eficiencia de conversión de energía y factor de potencia de hasta 0,98, lo que reduce el consumo energético.",
+    "Tecnología de driver de corriente constante que garantiza una corriente de trabajo estable, extiende la vida útil de la lámpara y reduce los costos de mantenimiento.",
+    "Compatibilidad electromagnética con distorsión armónica total inferior al 10 %, reduciendo interferencias con la red eléctrica y otros equipos de la intersección.",
   ],
   fichaTecnica: [
     {

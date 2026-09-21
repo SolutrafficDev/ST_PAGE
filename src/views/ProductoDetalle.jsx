@@ -1,8 +1,20 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import {
+  FaBolt,
+  FaShieldAlt,
+  FaCogs,
+  FaCheckCircle,
+  FaWifi,
+  FaBatteryFull,
+  FaRuler,
+  FaSolarPanel,
+  FaMicrochip,
+} from "react-icons/fa";
 import productos from "../data/productos";
 import { PrimaryText, SecondaryText, BodyText, TertiaryText } from "../components/Typography";
-import Carrusel from "../components/Carrusel";
+
+const iconSet = [FaBolt, FaShieldAlt, FaCogs, FaCheckCircle, FaWifi, FaBatteryFull, FaRuler, FaSolarPanel, FaMicrochip];
 
 const FilaTabla = ({ label, value }) => (
   <div className="flex border-b border-gray-200 px-5 py-4">
@@ -34,6 +46,10 @@ const ProductoDetalle = () => {
     );
   }
 
+  const features = producto.caracteristicas.map((c) =>
+    typeof c === "string" ? c : c.texto ?? ""
+  );
+
   return (
     <div className="min-h-screen">
       <div className="bg-accent pt-20">
@@ -60,12 +76,50 @@ const ProductoDetalle = () => {
             color="text-secondary"
             className="mb-6"
           />
-          <Carrusel slides={producto.caracteristicas} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {features.map((feature, i) => {
+              const Icon = iconSet[i % iconSet.length];
+              return (
+                <div
+                  key={i}
+                  className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 flex flex-col items-center text-center h-full"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon className="text-primary text-xl" />
+                  </div>
+                  <p className="mt-4 text-contrast-soft text-body-sm-mobile md:text-body-sm leading-relaxed">
+                    {feature}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <SecondaryText
+            text="Galería"
+            color="text-secondary"
+            className="mb-6"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {(producto.galeria ?? []).map((img, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src={img}
+                  alt={`Detalle ${i + 1}`}
+                  className="w-full h-64 md:h-80 object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </section>
 
         {producto.fichaTecnica ? (
           <div className="space-y-12">
-            
             <SecondaryText text="Ficha Técnica" color="text-secondary" />
 
             {producto.fichaTecnica.map((seccion, i) => (

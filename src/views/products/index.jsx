@@ -4,7 +4,7 @@ import semaforoPeatonal from "./SemaforoPeatonal";
 import trailerAnaliticaVial from "./TrailerAnaliticaVial";
 import temporizadorSegmento from "./TemporizadorSegmento";
 import unidadAnaliticaVialFija from "./UnidadAnaliticaVialFija";
-import semaforoVehicularSinTimer from "./SemaforoVehicularSinTimer";
+// import semaforoVehicularSinTimer from "./SemaforoVehicularSinTimer";
 import controladorSemafonicoMTIX8G from "./ControladorSemafonicoMTIX8G";
 import sim from "./SIM";
 import balizaInteligentePeatones from "./BalizaInteligentePeatones";
@@ -16,7 +16,7 @@ const productos = [
   trailerAnaliticaVial,
   temporizadorSegmento,
   unidadAnaliticaVialFija,
-  semaforoVehicularSinTimer,
+  // import semaforoVehicularSinTimer from "./SemaforoVehicularSinTimer";
   controladorSemafonicoMTIX8G,
   sim,
   balizaInteligentePeatones,
