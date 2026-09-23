@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 import { BodyText } from "../components/Typography";
 import {
   FaLaptopCode,
   FaTrafficLight,
   FaRoute,
+  FaChevronUp,
+  FaChevronDown,
+  FaImage,
 } from "react-icons/fa";
 import Reveal from "../components/Reveal";
 import Municipios from "../components/Municipios";
@@ -34,6 +38,150 @@ const BigTitle = ({ text, light }) => (
 const Inner = ({ children }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
 );
+
+// TODO: reemplazar por los hitos reales de la empresa cuando estén disponibles
+const hitos = [
+  {
+    year: "2001",
+    title: "Fundación de Solutraffic",
+    text: "Inicio de operaciones dedicadas a la ingeniería de la movilidad urbana en Colombia.",
+  },
+  {
+    year: "2006",
+    title: "Primeras intersecciones intervenidas",
+    text: "Implementación de los primeros sistemas de semaforización y control de tráfico.",
+  },
+  {
+    year: "2012",
+    title: "Fabricación propia",
+    text: "Puesta en marcha de la línea de diseño y fabricación de componentes para tráfico.",
+  },
+  {
+    year: "2018",
+    title: "Expansión nacional",
+    text: "Presencia en nuevas ciudades y municipios con soluciones integrales de movilidad.",
+  },
+  {
+    year: "Hoy",
+    title: "Innovación continua",
+    text: "Programa de I+D para mantener el portafolio tecnológico a la vanguardia.",
+  },
+];
+
+const Timeline = () => {
+  const total = hitos.length;
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return undefined;
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % total);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [paused, total]);
+
+  const goTo = (i) => setIndex(((i % total) + total) % total);
+
+  return (
+    <div
+      className="mt-12 flex items-stretch gap-4 sm:gap-8 max-w-6xl mx-auto"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      {/* Riel vertical con puntos de navegación */}
+      <div className="relative flex flex-col items-center justify-between py-1">
+        <span className="absolute top-0 bottom-0 w-px bg-border" aria-hidden="true" />
+        {hitos.map((hito, i) => (
+          <button
+            key={hito.year}
+            type="button"
+            onClick={() => goTo(i)}
+            aria-label={`Ir al hito ${hito.year}`}
+            aria-current={i === index}
+            className={`relative z-10 w-3.5 h-3.5 rounded-full border-2 transition-all duration-300 cursor-pointer ${
+              i === index
+                ? "bg-primary border-primary scale-125"
+                : "bg-background border-border hover:border-primary"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Visor del carrusel */}
+      <div className="relative flex-1 h-[26rem] sm:h-[24rem] overflow-hidden">
+        <div
+          className="flex flex-col transition-transform duration-700 ease-out"
+          style={{
+            height: `${total * 100}%`,
+            transform: `translateY(-${(index * 100) / total}%)`,
+          }}
+        >
+          {hitos.map((hito) => (
+            <div
+              key={hito.year}
+              style={{ height: `${100 / total}%` }}
+              className="flex items-center pr-1"
+            >
+              <div className="w-full flex flex-col md:flex-row items-center gap-5 md:gap-10 md:h-full">
+                {/* Información del hito */}
+                <div className="flex-1 min-w-0">
+                  <span className="text-primary font-bold text-h3-mobile md:text-h3 tracking-wide">
+                    {hito.year}
+                  </span>
+                  <h3 className="mt-1 text-contrast font-bold text-h4 leading-snug">
+                    {hito.title}
+                  </h3>
+                  <p className="mt-3 text-contrast-soft text-body-md-mobile md:text-body-md leading-relaxed">
+                    {hito.text}
+                  </p>
+                </div>
+
+                {/* Espacio para imagen / gif del hito */}
+                <div className="w-full md:w-72 lg:w-96 h-44 md:h-full shrink-0 rounded-xl border-2 border-dashed border-border bg-yellow-soft/50 flex flex-col items-center justify-center gap-2 text-contrast-muted">
+                  <FaImage className="text-2xl" />
+                  <span className="text-body-sm-mobile md:text-body-sm text-center px-4">
+                    Espacio para imagen / GIF del hito
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Difuminado superior e inferior */}
+        <span
+          className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-background to-transparent"
+          aria-hidden="true"
+        />
+        <span
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-background to-transparent"
+          aria-hidden="true"
+        />
+      </div>
+
+      {/* Controles arriba / abajo */}
+      <div className="flex flex-col justify-center gap-3">
+        <button
+          type="button"
+          onClick={() => goTo(index - 1)}
+          aria-label="Hito anterior"
+          className="w-10 h-10 rounded-full border border-border bg-background text-contrast flex items-center justify-center transition-colors hover:bg-primary hover:border-primary cursor-pointer"
+        >
+          <FaChevronUp />
+        </button>
+        <button
+          type="button"
+          onClick={() => goTo(index + 1)}
+          aria-label="Hito siguiente"
+          className="w-10 h-10 rounded-full border border-border bg-background text-contrast flex items-center justify-center transition-colors hover:bg-primary hover:border-primary cursor-pointer"
+        >
+          <FaChevronDown />
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const SobreNosotros = () => {
   return (
@@ -246,6 +394,21 @@ const SobreNosotros = () => {
             </div>
           </Inner>
         </div>
+      </div>
+
+      {/* Sección: Línea de tiempo */}
+      <div className="bg-background">
+        <Inner>
+          <div className="py-12 sm:py-16">
+            <Reveal delay={100} className="text-center">
+              <SmallLabel text="Nuestra Trayectoria" />
+              <BigTitle text="Línea de Tiempo" />
+            </Reveal>
+            <Reveal delay={200}>
+              <Timeline />
+            </Reveal>
+          </div>
+        </Inner>
       </div>
     </section>
   );
