@@ -1,8 +1,8 @@
 import serviciop from "../../assets/services/3/title.png";
-import imgPlaneacionCard from "../../assets/services/3/card.png";
-import imgBloque1 from "../../assets/services/3/1.png";
-import imgBloque2 from "../../assets/services/3/2.png";
-import imgBloque3 from "../../assets/services/3/3.png";
+import imgPlaneacionCard from "../../assets/services/3/card.webp";
+import imgBloque1 from "../../assets/services/3/1.webp";
+import imgBloque2 from "../../assets/services/3/2.webp";
+import imgBloque3 from "../../assets/services/3/3.webp";
 import {
   FaRoad,
   FaWifi,

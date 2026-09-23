@@ -1,6 +1,6 @@
 import gifEjemplo from "../../assets/products/2/2p.gif";
-import serviciop from "../../assets/products/2/2main.png";
-import carrusel1 from "../../assets/products/2/2c1.png";
+import serviciop from "../../assets/products/2/2main.webp";
+import carrusel1 from "../../assets/products/2/2c1.webp";
 import carrusel2 from "../../assets/products/2/2c2.png";
 
 const producto = {

@@ -1,5 +1,5 @@
 import gifEjemplo from "../../assets/a.gif";
-import serviciop from "../../assets/serviciop.png";
+import serviciop from "../../assets/serviciop.webp";
 import carrusel1 from "../../assets/carrusel1.jpg";
 import carrusel2 from "../../assets/carrusel2.jpg";
 import carrusel3 from "../../assets/carrusel3.jpg";

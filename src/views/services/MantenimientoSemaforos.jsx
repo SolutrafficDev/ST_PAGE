@@ -1,6 +1,6 @@
 import serviciop from "../../assets/services/6/title.png";
-import imgMttoCard from "../../assets/services/6/card.png";
-import carrusel4 from "../../assets/services/6/1.png";
+import imgMttoCard from "../../assets/services/6/card.webp";
+import carrusel4 from "../../assets/services/6/1.webp";
 import { FaClock, FaUsers, FaBolt } from "react-icons/fa";
 
 const producto = {

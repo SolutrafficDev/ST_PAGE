@@ -1,8 +1,8 @@
 import serviciop from "../../assets/services/2/title.png";
-import imgInfraCard from "../../assets/services/2/card.png";
+import imgInfraCard from "../../assets/services/2/card.webp";
 import carrusel1 from "../../assets/services/2/1.png";
-import carrusel2 from "../../assets/services/2/2.png";
-import carrusel3 from "../../assets/services/2/3.png";
+import carrusel2 from "../../assets/services/2/2.webp";
+import carrusel3 from "../../assets/services/2/3.webp";
 
 const producto = {
   id: "division-infraestructura-vial",

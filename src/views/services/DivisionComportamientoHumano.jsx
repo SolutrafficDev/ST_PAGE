@@ -1,8 +1,8 @@
 import serviciop from "../../assets/services/4/title.png";
-import imgCompCard from "../../assets/services/4/card.png";
-import carrusel1 from "../../assets/services/4/1.png";
-import carrusel2 from "../../assets/services/4/2.png";
-import carrusel3 from "../../assets/services/4/3.png";
+import imgCompCard from "../../assets/services/4/card.webp";
+import carrusel1 from "../../assets/services/4/1.webp";
+import carrusel2 from "../../assets/services/4/2.webp";
+import carrusel3 from "../../assets/services/4/3.webp";
 
 const producto = {
   id: "division-comportamiento-humano",

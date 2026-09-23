@@ -1,8 +1,8 @@
 import serviciop from "../../assets/services/8/title.png";
-import imgSoftCard from "../../assets/services/8/card.png";
-import carrusel1 from "../../assets/services/8/1.png";
-import carrusel2 from "../../assets/services/8/2.png";
-import carrusel3 from "../../assets/services/8/3.png";
+import imgSoftCard from "../../assets/services/8/card.webp";
+import carrusel1 from "../../assets/services/8/1.webp";
+import carrusel2 from "../../assets/services/8/2.webp";
+import carrusel3 from "../../assets/services/8/3.webp";
 
 const producto = {
   id: "software",
