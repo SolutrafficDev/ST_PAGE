@@ -69,6 +69,8 @@ const Navbar = () => {
 
   const pathSection = isHome
     ? null
+    : location.pathname === "/galeria"
+    ? "sobre"
     : location.pathname.startsWith("/productos")
     ? "productos"
     : location.pathname.startsWith("/servicios")
