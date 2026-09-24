@@ -49,7 +49,7 @@ const Navbar = () => {
       lastScrollY = currentScrollY;
 
       if (!isHome) return;
-      const sections = ["inicio", "sobre", "productos", "servicios", "compromiso", "contacto"];
+      const sections = ["inicio", "productos", "servicios", "sobre", "compromiso", "contacto"];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -79,9 +79,9 @@ const Navbar = () => {
 
   const navItems = [
     { id: "inicio", text: "Inicio" },
-    { id: "sobre", text: "Sobre Nosotros" },
     { id: "productos", text: "Productos" },
     { id: "servicios", text: "Servicios" },
+    { id: "sobre", text: "Sobre Nosotros" },
     { id: "compromiso", text: "Compromiso Social" },
     { id: "contacto", text: "Contáctanos" },
   ];
