@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { BodyText } from "../components/Typography";
 import {
   FaLaptopCode,
@@ -632,6 +633,17 @@ const PoliticaCertificaciones = () => {
                 <SmallLabel text="Política de Calidad" />
                 <BigTitle text="Compromiso Seguro y Sostenible de Calidad" />
               </Reveal>
+              <div className="mt-6 flex justify-center lg:justify-start">
+                <Link
+                  to="/galeria"
+                  className="inline-flex items-center gap-2 rounded bg-secondary px-6 py-3 font-semibold text-primary transition-all duration-200 hover:bg-accent hover:text-primary"
+                >
+                  Ver Galería
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5h16v14H4zM8 15l3-3 2 2 3-4 4 5" />
+                  </svg>
+                </Link>
+              </div>
               <div className="mt-6 space-y-5">
                 {textos.map((text, index) => (
                   <Reveal key={text} delay={200 + index * 100}>

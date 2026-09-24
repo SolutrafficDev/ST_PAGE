@@ -9,6 +9,7 @@ import CompromisoSocial from "./views/CompromisoSocial";
 import Contactanos from "./views/Contactanos";
 import ServicioDetalle from "./views/ServicioDetalle";
 import ProductoDetalle from "./views/ProductoDetalle";
+import Galeria from "./views/Galeria";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
 import BackToTopButton from "./components/BackToTopButton";
@@ -44,6 +45,7 @@ function App() {
             </>
           }
         />
+        <Route path="/galeria" element={<Galeria />} />
         <Route path="/servicios/:id" element={<ServicioDetalle />} />
         <Route path="/productos/:id" element={<ProductoDetalle />} />
       </Routes>
