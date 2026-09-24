@@ -1,9 +1,9 @@
 import serviciop from "../../assets/services/7/title.png";
-import imgSmartCard from "../../assets/services/7/card.png";
-import carrusel1 from "../../assets/services/7/1.png";
-import carrusel2 from "../../assets/services/7/2.png";
-import carrusel3 from "../../assets/services/7/3.png";
-import carrusel4 from "../../assets/services/7/4.png";
+import imgSmartCard from "../../assets/services/7/card.webp";
+import carrusel1 from "../../assets/services/7/1.webp";
+import carrusel2 from "../../assets/services/7/2.webp";
+import carrusel3 from "../../assets/services/7/3.webp";
+import carrusel4 from "../../assets/services/7/4.webp";
 import { FaWifi, FaCamera, FaLeaf, FaBolt } from "react-icons/fa";
 
 const producto = {

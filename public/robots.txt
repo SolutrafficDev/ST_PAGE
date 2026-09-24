@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-# Bloquea rutas internas de build (no son páginas)
 Disallow: /assets/
 
 Sitemap: https://solutraffic.com/sitemap.xml

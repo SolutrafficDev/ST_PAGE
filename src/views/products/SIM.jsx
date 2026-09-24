@@ -1,8 +1,8 @@
 import gifEjemplo from "../../assets/products/7/1.gif";
 import serviciop from "../../assets/products/7/main.jpeg";
-import carrusel1 from "../../assets/products/7/1.png";
-import carrusel2 from "../../assets/products/7/2.png";
-import carrusel3 from "../../assets/products/7/3.png";
+import carrusel1 from "../../assets/products/7/1.webp";
+import carrusel2 from "../../assets/products/7/2.webp";
+import carrusel3 from "../../assets/products/7/3.webp";
 import carrusel4 from "../../assets/products/7/4.png";
 
 const producto = {

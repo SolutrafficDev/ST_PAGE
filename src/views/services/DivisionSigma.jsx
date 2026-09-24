@@ -1,6 +1,6 @@
 import imgSigma from "../../assets/services/1/title.png";
-import imgSigmaIntro from "../../assets/services/1/intro.png";
-import imgSigmaCard from "../../assets/services/1/card.png";
+import imgSigmaIntro from "../../assets/services/1/intro.webp";
+import imgSigmaCard from "../../assets/services/1/card.webp";
 
 const producto = {
   id: "division-sigma",

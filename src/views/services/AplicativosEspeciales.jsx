@@ -1,11 +1,11 @@
 import serviciop from "../../assets/services/5/title.png";
-import imgAplicCard from "../../assets/services/5/card.png";
+import imgAplicCard from "../../assets/services/5/card.webp";
 import carrusel1 from "../../assets/services/5/1.png";
-import carrusel2 from "../../assets/services/5/2.png";
-import carrusel3 from "../../assets/services/5/3.png";
-import carrusel4 from "../../assets/services/5/4.png";
-import carrusel5 from "../../assets/services/5/5.png";
-import carrusel6 from "../../assets/services/5/6.png";
+import carrusel2 from "../../assets/services/5/2.webp";
+import carrusel3 from "../../assets/services/5/3.webp";
+import carrusel4 from "../../assets/services/5/4.webp";
+import carrusel5 from "../../assets/services/5/5.webp";
+import carrusel6 from "../../assets/services/5/6.webp";
 
 const producto = {
   id: "aplicativos-especiales",
