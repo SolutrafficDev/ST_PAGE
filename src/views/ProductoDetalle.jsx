@@ -72,7 +72,7 @@ const ProductoDetalle = () => {
 
         <section>
           <SecondaryText
-            text="Características Especiales"
+            text={producto.caracteristicasTitulo ?? "Características Especiales"}
             color="text-secondary"
             className="mb-6"
           />
