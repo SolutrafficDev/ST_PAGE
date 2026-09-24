@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { BodyText } from "../components/Typography";
 import {
+  FaLaptopCode,
+  FaTrafficLight,
+  FaRoute,
   FaChevronUp,
   FaChevronDown,
   FaImage,
@@ -518,16 +521,16 @@ const NuestroTalento = () => (
             <Reveal delay={500}>
               <div className="space-y-3 pt-2">
                 {[
-                  "Software de control y gestión de tráfico vehicular y peatonal.",
-                  "Sistemas de semaforización y estudios de flujos vehiculares y peatonales.",
-                  "Modelación de intersecciones y sistemas de señalización vial.",
-                ].map((text) => (
-                  <p
-                    key={text}
-                    className="text-primary text-body-md-mobile md:text-body-md font-semibold leading-relaxed"
-                  >
-                    {text}
-                  </p>
+                  { icon: FaLaptopCode, text: "Software de control y gestión de tráfico vehicular y peatonal." },
+                  { icon: FaTrafficLight, text: "Sistemas de semaforización y estudios de flujos vehiculares y peatonales." },
+                  { icon: FaRoute, text: "Modelación de intersecciones y sistemas de señalización vial." },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-3">
+                    <item.icon className="mt-0.5 shrink-0 text-primary text-xl" />
+                    <p className="text-primary text-body-md-mobile md:text-body-md font-semibold leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
                 ))}
               </div>
             </Reveal>

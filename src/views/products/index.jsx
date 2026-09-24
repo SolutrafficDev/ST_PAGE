@@ -9,6 +9,7 @@ import controladorSemafonicoMTIX8G from "./ControladorSemafonicoMTIX8G";
 import sim from "./SIM";
 import balizaInteligentePeatones from "./BalizaInteligentePeatones";
 import controlVariablesCriticas from "./ControlVariablesCriticas";
+import softwareCentral from "./SoftwareCentral";
 
 const productos = [
   sistemaSolarAutonomo,
@@ -22,6 +23,7 @@ const productos = [
   sim,
   balizaInteligentePeatones,
   controlVariablesCriticas,
+  softwareCentral,
 ];
 
 export default productos;
