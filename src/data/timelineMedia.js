@@ -1,5 +1,6 @@
 // ARCHIVO GENERADO AUTOMATICAMENTE - no editar a mano.
 // Organiza los medios de la linea de tiempo por hito (src/assets/TIMELINE_ST).
+// Orden: mas reciente primero, igual que el arreglo `hitos` de SobreNosotros.jsx.
 // Regenerar con: node scripts/timeline-index.mjs
 
 // 01_2015_Equipo_Cova
@@ -149,86 +150,15 @@ import hito19_img_01_WhatsApp_Image_2026_09_03_at_3_37_23_PM from "../assets/TIM
 import hito19_img_02_WhatsApp_Image_2026_09_03_at_3_37_24_PM_1 from "../assets/TIMELINE_ST/19_2026-05-26_Controladores_Solares_Tauramena/img/02_WhatsApp_Image_2026-09-03_at_3_37_24_PM_1.jpg";
 import hito19_img_03_20260526_084903 from "../assets/TIMELINE_ST/19_2026-05-26_Controladores_Solares_Tauramena/img/03_20260526_084903.jpg";
 
-
 export const timelineMedia = [
   {
-    portada: hito1Portada,
-    imagenes: [hito1_img_01_WhatsApp_Image_2026_09_23_at_1_01_28_PM, hito1_img_02_WhatsApp_Image_2026_09_23_at_12_16_34_PM, hito1_img_03_WhatsApp_Image_2026_09_23_at_1_01_28_PM_1],
+    portada: hito19Portada,
+    imagenes: [hito19_img_01_WhatsApp_Image_2026_09_03_at_3_37_23_PM, hito19_img_02_WhatsApp_Image_2026_09_03_at_3_37_24_PM_1, hito19_img_03_20260526_084903],
     videos: [],
   },
   {
-    portada: hito2Portada,
-    imagenes: [hito2_img_01_20180517_060629, hito2_img_02_20180517_060601, hito2_img_03_20180517_060633],
-    videos: [hito2_vid_01_20180317_165952, hito2_vid_02_20180317_165857, hito2_vid_03_20180317_171533],
-  },
-  {
-    portada: hito3Portada,
-    imagenes: [hito3_img_01_IMG_20180517_WA0031, hito3_img_02_IMG_20180517_WA0033],
-    videos: [hito3_vid_01_20180418_095655],
-  },
-  {
-    portada: hito4Portada,
-    imagenes: [hito4_img_01_20180517_102859, hito4_img_02_20180517_102857, hito4_img_03_20180517_102850],
-    videos: [hito4_vid_01_20180517_124349, hito4_vid_02_20180517_124715, hito4_vid_03_20180517_124046, hito4_vid_04_20180517_124312],
-  },
-  {
-    portada: hito5Portada,
-    imagenes: [hito5_img_01_IMG_20180619_WA0048, hito5_img_02_IMG_20180619_WA0157, hito5_img_03_IMG_20180619_WA0159, hito5_img_04_IMG_20180619_WA0169, hito5_img_05_IMG_20180619_WA0154, hito5_img_06_IMG_20180619_WA0049, hito5_img_07_IMG_20180619_WA0160, hito5_img_08_IMG_20180619_WA0168, hito5_img_09_IMG_20180619_WA0053, hito5_img_10_IMG_20180619_WA0052, hito5_img_11_IMG_20180619_WA0050],
-    videos: [],
-  },
-  {
-    portada: hito6Portada,
-    imagenes: [hito6_img_01_20180621_123222, hito6_img_02_20180622_103718, hito6_img_03_20180621_123935, hito6_img_04_20180621_123946, hito6_img_05_20180621_123228, hito6_img_06_20180621_123239, hito6_img_07_20180621_123219, hito6_img_08_20180621_123920, hito6_img_09_20180621_123237, hito6_img_10_20180622_103726, hito6_img_11_20180621_123250, hito6_img_12_20180621_123244, hito6_img_13_20180621_123217, hito6_img_14_20180621_123907, hito6_img_15_20180621_124005, hito6_img_16_20180621_123940],
-    videos: [],
-  },
-  {
-    portada: hito7Portada,
-    imagenes: [hito7_img_01_IMG_20181221_WA0047, hito7_img_02_IMG_20181221_WA0046, hito7_img_03_IMG_20181221_WA0045, hito7_img_04_IMG_20181221_WA0044],
-    videos: [],
-  },
-  {
-    portada: hito8Portada,
-    imagenes: [hito8_img_01_IMG_20190228_WA0051, hito8_img_02_IMG_20190228_WA0056, hito8_img_03_IMG_20190228_WA0059, hito8_img_04_IMG_20190228_WA0050, hito8_img_05_IMG_20190228_WA0057, hito8_img_06_IMG_20190228_WA0060, hito8_img_07_20190724_115257, hito8_img_08_IMG_20190228_WA0061],
-    videos: [],
-  },
-  {
-    portada: hito9Portada,
-    imagenes: [hito9_img_01_IMG_20190312_WA0018, hito9_img_02_IMG_20190312_WA0080, hito9_img_03_IMG_20190312_WA0016, hito9_img_04_IMG_20190312_WA0019],
-    videos: [],
-  },
-  {
-    portada: hito10Portada,
-    imagenes: [hito10_img_01_20190722_094320, hito10_img_02_20190722_094340, hito10_img_03_20190722_094326],
-    videos: [],
-  },
-  {
-    portada: hito11Portada,
-    imagenes: [hito11_img_01_20191003_125340, hito11_img_02_20191003_130208, hito11_img_03_20191003_130219, hito11_img_04_20191003_125353, hito11_img_05_20191003_125339],
-    videos: [hito11_vid_01_20191003_122839],
-  },
-  {
-    portada: hito12Portada,
-    imagenes: [hito12_img_01_Screenshot_20240215_112503_WhatsApp, hito12_img_02_20191004_062924, hito12_img_03_Screenshot_20240215_112429_WhatsApp],
-    videos: [],
-  },
-  {
-    portada: hito13Portada,
-    imagenes: [hito13_img_01_13_Diciembre_18_2024],
-    videos: [],
-  },
-  {
-    portada: hito14Portada,
-    imagenes: [],
-    videos: [hito14_vid_01_14_Diciembre_26_2024],
-  },
-  {
-    portada: hito15Portada,
-    imagenes: [hito15_img_01_20250717_135211, hito15_img_02_20250711_060636],
-    videos: [],
-  },
-  {
-    portada: hito16Portada,
-    imagenes: [hito16_img_01_20251126_070614, hito16_img_02_20251126_094131],
+    portada: hito18Portada,
+    imagenes: [hito18_img_01_WhatsApp_Image_2026_09_23_at_1_59_22_PM_1, hito18_img_02_WhatsApp_Image_2026_09_23_at_1_59_22_PM],
     videos: [],
   },
   {
@@ -237,13 +167,83 @@ export const timelineMedia = [
     videos: [hito17_vid_01_20260208_105300_01, hito17_vid_02_20260208_105414],
   },
   {
-    portada: hito18Portada,
-    imagenes: [hito18_img_01_WhatsApp_Image_2026_09_23_at_1_59_22_PM_1, hito18_img_02_WhatsApp_Image_2026_09_23_at_1_59_22_PM],
+    portada: hito16Portada,
+    imagenes: [hito16_img_01_20251126_070614, hito16_img_02_20251126_094131],
     videos: [],
   },
   {
-    portada: hito19Portada,
-    imagenes: [hito19_img_01_WhatsApp_Image_2026_09_03_at_3_37_23_PM, hito19_img_02_WhatsApp_Image_2026_09_03_at_3_37_24_PM_1, hito19_img_03_20260526_084903],
+    portada: hito15Portada,
+    imagenes: [hito15_img_01_20250717_135211, hito15_img_02_20250711_060636],
+    videos: [],
+  },
+  {
+    portada: hito14Portada,
+    imagenes: [],
+    videos: [hito14_vid_01_14_Diciembre_26_2024],
+  },
+  {
+    portada: hito13Portada,
+    imagenes: [hito13_img_01_13_Diciembre_18_2024],
+    videos: [],
+  },
+  {
+    portada: hito12Portada,
+    imagenes: [hito12_img_01_Screenshot_20240215_112503_WhatsApp, hito12_img_02_20191004_062924, hito12_img_03_Screenshot_20240215_112429_WhatsApp],
+    videos: [],
+  },
+  {
+    portada: hito11Portada,
+    imagenes: [hito11_img_01_20191003_125340, hito11_img_02_20191003_130208, hito11_img_03_20191003_130219, hito11_img_04_20191003_125353, hito11_img_05_20191003_125339],
+    videos: [hito11_vid_01_20191003_122839],
+  },
+  {
+    portada: hito10Portada,
+    imagenes: [hito10_img_01_20190722_094320, hito10_img_02_20190722_094340, hito10_img_03_20190722_094326],
+    videos: [],
+  },
+  {
+    portada: hito9Portada,
+    imagenes: [hito9_img_01_IMG_20190312_WA0018, hito9_img_02_IMG_20190312_WA0080, hito9_img_03_IMG_20190312_WA0016, hito9_img_04_IMG_20190312_WA0019],
+    videos: [],
+  },
+  {
+    portada: hito8Portada,
+    imagenes: [hito8_img_01_IMG_20190228_WA0051, hito8_img_02_IMG_20190228_WA0056, hito8_img_03_IMG_20190228_WA0059, hito8_img_04_IMG_20190228_WA0050, hito8_img_05_IMG_20190228_WA0057, hito8_img_06_IMG_20190228_WA0060, hito8_img_07_20190724_115257, hito8_img_08_IMG_20190228_WA0061],
+    videos: [],
+  },
+  {
+    portada: hito7Portada,
+    imagenes: [hito7_img_01_IMG_20181221_WA0047, hito7_img_02_IMG_20181221_WA0046, hito7_img_03_IMG_20181221_WA0045, hito7_img_04_IMG_20181221_WA0044],
+    videos: [],
+  },
+  {
+    portada: hito6Portada,
+    imagenes: [hito6_img_01_20180621_123222, hito6_img_02_20180622_103718, hito6_img_03_20180621_123935, hito6_img_04_20180621_123946, hito6_img_05_20180621_123228, hito6_img_06_20180621_123239, hito6_img_07_20180621_123219, hito6_img_08_20180621_123920, hito6_img_09_20180621_123237, hito6_img_10_20180622_103726, hito6_img_11_20180621_123250, hito6_img_12_20180621_123244, hito6_img_13_20180621_123217, hito6_img_14_20180621_123907, hito6_img_15_20180621_124005, hito6_img_16_20180621_123940],
+    videos: [],
+  },
+  {
+    portada: hito5Portada,
+    imagenes: [hito5_img_01_IMG_20180619_WA0048, hito5_img_02_IMG_20180619_WA0157, hito5_img_03_IMG_20180619_WA0159, hito5_img_04_IMG_20180619_WA0169, hito5_img_05_IMG_20180619_WA0154, hito5_img_06_IMG_20180619_WA0049, hito5_img_07_IMG_20180619_WA0160, hito5_img_08_IMG_20180619_WA0168, hito5_img_09_IMG_20180619_WA0053, hito5_img_10_IMG_20180619_WA0052, hito5_img_11_IMG_20180619_WA0050],
+    videos: [],
+  },
+  {
+    portada: hito4Portada,
+    imagenes: [hito4_img_01_20180517_102859, hito4_img_02_20180517_102857, hito4_img_03_20180517_102850],
+    videos: [hito4_vid_01_20180517_124349, hito4_vid_02_20180517_124715, hito4_vid_03_20180517_124046, hito4_vid_04_20180517_124312],
+  },
+  {
+    portada: hito3Portada,
+    imagenes: [hito3_img_01_IMG_20180517_WA0031, hito3_img_02_IMG_20180517_WA0033],
+    videos: [hito3_vid_01_20180418_095655],
+  },
+  {
+    portada: hito2Portada,
+    imagenes: [hito2_img_01_20180517_060629, hito2_img_02_20180517_060601, hito2_img_03_20180517_060633],
+    videos: [hito2_vid_01_20180317_165952, hito2_vid_02_20180317_165857, hito2_vid_03_20180317_171533],
+  },
+  {
+    portada: hito1Portada,
+    imagenes: [hito1_img_01_WhatsApp_Image_2026_09_23_at_1_01_28_PM, hito1_img_02_WhatsApp_Image_2026_09_23_at_12_16_34_PM, hito1_img_03_WhatsApp_Image_2026_09_23_at_1_01_28_PM_1],
     videos: [],
   },
 ];
