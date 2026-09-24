@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BodyText } from "../components/Typography";
 import {
-  FaLaptopCode,
-  FaTrafficLight,
-  FaRoute,
   FaChevronUp,
   FaChevronDown,
   FaImage,
@@ -38,17 +35,6 @@ const BigTitle = ({ text, light }) => (
 
 const Inner = ({ children }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
-);
-
-const FadeImage = ({ src, alt, className = "", fadeColor, fadeSide = "right" }) => (
-  <div className={`relative overflow-hidden ${className}`}>
-    <img src={src} alt={alt} className="w-full h-full object-cover object-top" />
-    <span
-      aria-hidden="true"
-      className={`about-image-fade about-image-fade--${fadeSide}`}
-      style={{ "--fade-color": fadeColor }}
-    />
-  </div>
 );
 
 // Hitos de la compañía (orden cronológico descendente: lo más reciente primero)
@@ -266,7 +252,7 @@ const MediaViewer = ({ hito, media, active }) => {
           <button
             type="button"
             onClick={() => setLightbox(true)}
-            className="relative w-full h-full cursor-zoom-in"
+            className="w-full h-full cursor-zoom-in"
             aria-label={`Ampliar imagen de ${hito.title}`}
           >
             <img
@@ -274,11 +260,6 @@ const MediaViewer = ({ hito, media, active }) => {
               alt={hito.title}
               loading="lazy"
               className="w-full h-full object-cover"
-            />
-            <span
-              aria-hidden="true"
-              className="about-image-fade about-image-fade--right"
-              style={{ "--fade-color": "var(--background)" }}
             />
           </button>
         )}
@@ -499,12 +480,10 @@ const Timeline = () => {
 const NuestroTalento = () => (
   <div id="talento" className="lg:flex lg:flex-row-reverse lg:items-stretch">
     <Reveal direction="left" className="lg:w-2/5 relative">
-      <FadeImage
+      <img
         src={imgTalento}
         alt="Nuestro talento"
-        className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full"
-        fadeColor="var(--secondary)"
-        fadeSide="left"
+        className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
       />
     </Reveal>
     <div className="bg-secondary lg:w-3/5">
@@ -537,23 +516,18 @@ const NuestroTalento = () => (
               />
             </Reveal>
             <Reveal delay={500}>
-              <div className="grid gap-4 pt-2">
+              <div className="space-y-3 pt-2">
                 {[
-                  { icon: FaLaptopCode, text: "Software de control y gestión de tráfico vehicular y peatonal." },
-                  { icon: FaTrafficLight, text: "Sistemas de semaforización y estudios de flujos vehiculares y peatonales." },
-                  { icon: FaRoute, text: "Modelación de intersecciones y sistemas de señalización vial." },
-                ].map((item) => (
-                  <div
-                    key={item.text}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm"
+                  "Software de control y gestión de tráfico vehicular y peatonal.",
+                  "Sistemas de semaforización y estudios de flujos vehiculares y peatonales.",
+                  "Modelación de intersecciones y sistemas de señalización vial.",
+                ].map((text) => (
+                  <p
+                    key={text}
+                    className="text-primary text-body-md-mobile md:text-body-md font-semibold leading-relaxed"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="text-primary text-lg" />
-                    </div>
-                    <p className="text-contrast text-body-md-mobile md:text-body-md leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
+                    {text}
+                  </p>
                 ))}
               </div>
             </Reveal>
@@ -567,12 +541,10 @@ const NuestroTalento = () => (
 const QuienesSomos = () => (
   <div id="quienes-somos" className="lg:flex lg:items-stretch">
     <Reveal direction="right" className="lg:w-2/5 relative">
-      <FadeImage
+      <img
         src={imgQuienesSomos}
         alt="Trayectoria e intersecciones viales"
-        className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full"
-        fadeColor="var(--background)"
-        fadeSide="right"
+        className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
       />
     </Reveal>
     <div className="bg-background lg:w-3/5">
@@ -644,12 +616,10 @@ const PoliticaCertificaciones = () => {
     <div id="politica-calidad" className="bg-primary">
       <div className="lg:flex lg:items-stretch">
         <Reveal direction="right" className="lg:w-2/5 relative">
-          <FadeImage
+          <img
             src={imgCompromiso}
             alt="Política de calidad y compromiso sostenible"
-            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full"
-            fadeColor="var(--primary)"
-            fadeSide="right"
+            className="w-full h-72 lg:absolute lg:inset-0 lg:h-full lg:w-full object-cover object-top"
           />
         </Reveal>
         <div className="lg:w-3/5">
