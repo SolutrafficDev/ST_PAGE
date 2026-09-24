@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BodyText } from "../components/Typography";
 import {
   FaLaptopCode,
@@ -44,48 +44,139 @@ const Inner = ({ children }) => (
 // Hitos de la compañía (orden cronológico descendente: lo más reciente primero)
 // Cada hito puede llevar una imagen/GIF con la clave `img`.
 const hitos = [
-  { year: "2026", date: "Mayo 26", title: "Controladores Solares Tauramena" },
-  { year: "2026", date: "Marzo 15", title: "Remodelación Laboratorio y Producción" },
+  {
+    year: "2026",
+    date: "Mayo 26",
+    title: "Controladores Solares Tauramena",
+    text: "Implementamos controladores semafóricos alimentados con energía solar en Tauramena, una solución autónoma para zonas donde la red eléctrica es limitada.",
+  },
+  {
+    year: "2026",
+    date: "Marzo 15",
+    title: "Remodelación Laboratorio y Producción",
+    text: "Ampliamos y modernizamos nuestro laboratorio y área de producción para responder a la creciente demanda de soluciones de movilidad.",
+  },
   {
     year: "2026",
     date: "Febrero 8",
     title: "Pruebas del Vehículo de Analítica en el Estadio del Deportivo Cali",
+    text: "Validamos en operación real la captura de video, la transmisión satelital y la clasificación vehicular de nuestro vehículo de analítica vial.",
   },
-  { year: "2025", date: "Noviembre 26", title: "Producción Santa Marta" },
-  { year: "2025", date: "Julio 17", title: "Producción Girardot" },
-  { year: "2024", date: "Diciembre 26", title: "Entrega Body Cams Candelaria" },
-  { year: "2024", date: "Diciembre 18", title: "Mantenimiento y Programación Jamundí" },
+  {
+    year: "2025",
+    date: "Noviembre 26",
+    title: "Producción Santa Marta",
+    text: "Desarrollamos y despachamos producción de equipos de semaforización destinada a Santa Marta, fortaleciendo nuestra presencia en la costa Caribe.",
+  },
+  {
+    year: "2025",
+    date: "Julio 17",
+    title: "Producción Girardot",
+    text: "Atendimos una nueva producción de equipos para Girardot, ratificando la capacidad de nuestro laboratorio para proyectos en todo el país.",
+  },
+  {
+    year: "2024",
+    date: "Diciembre 26",
+    title: "Entrega Body Cams Candelaria",
+    text: "Entregamos cámaras corporales (body cams) para apoyar el registro y la gestión de la movilidad en campo.",
+  },
+  {
+    year: "2024",
+    date: "Diciembre 18",
+    title: "Mantenimiento y Programación Jamundí",
+    text: "Prestamos servicios de mantenimiento y programación de controladores semafóricos, garantizando la continuidad de las intersecciones.",
+  },
   {
     year: "2019",
     date: "Octubre 24",
     title: "Ensamble y Funcionamiento Prototipo M-Tix",
+    text: "Completamos el ensamble y las pruebas de funcionamiento del prototipo M-Tix, un paso clave en el desarrollo de nuestra tecnología propia.",
   },
-  { year: "2019", date: "Octubre 3", title: "Capacitación Palmira" },
-  { year: "2019", date: "Julio 22", title: "Prototipo M-Tix" },
-  { year: "2019", date: "Marzo 12", title: "Controlador Cova Inalámbrico" },
-  { year: "2019", date: "Febrero 28", title: "Entrega Central Palmira" },
-  { year: "2018", date: "Diciembre 21", title: "Solutraffic Humana" },
-  { year: "2018", date: "Junio 21", title: "Inicio Construcción Central Palmira" },
-  { year: "2018", date: "Junio 19", title: "Mundial Solutraffic" },
-  { year: "2018", date: "Mayo 30", title: "Capacitación Personal" },
-  { year: "2018", date: "Mayo 4", title: "Laboratorio y Producción" },
-  { year: "2018", date: "Marzo 20", title: "Recepción y Show Room Solutraffic" },
-  { year: "2015", date: "", title: "Equipo Cova" },
+  {
+    year: "2019",
+    date: "Octubre 3",
+    title: "Capacitación Palmira",
+    text: "Capacitamos al personal de tránsito de Palmira en el uso de los sistemas de control y gestión de tráfico, con acompañamiento en el centro de control.",
+  },
+  {
+    year: "2019",
+    date: "Julio 22",
+    title: "Prototipo M-Tix",
+    text: "Avanzamos en el desarrollo del prototipo M-Tix, el controlador semafórico que marcaría el inicio de nuestra línea de productos propios.",
+  },
+  {
+    year: "2019",
+    date: "Marzo 12",
+    title: "Controlador Cova Inalámbrico",
+    text: "Implementamos un controlador con comunicación inalámbrica, una solución práctica para gestionar intersecciones sin depender de cableado dedicado.",
+  },
+  {
+    year: "2019",
+    date: "Febrero 28",
+    title: "Entrega Central Palmira",
+    text: "Entregamos y dejamos en operación el Centro de Control de Tráfico de Palmira, con tableros de monitoreo y sistemas de gestión en línea.",
+  },
+  {
+    year: "2018",
+    date: "Diciembre 21",
+    title: "Solutraffic Humana",
+    text: "Con nuestro programa Solutraffic Humana acompañamos a más de 210 niños en su primera comunión en Dosquebradas (Pereira), aportando los trajes y elementos para su celebración.",
+  },
+  {
+    year: "2018",
+    date: "Junio 21",
+    title: "Inicio Construcción Central Palmira",
+    text: "Iniciamos la construcción y adecuación del Centro de Control de Tráfico de Palmira, el espacio que albergaría la operación y el monitoreo de la ciudad.",
+  },
+  {
+    year: "2018",
+    date: "Junio 19",
+    title: "Mundial Solutraffic",
+    text: "Durante el Mundial de Rusia 2018 reunimos al equipo para apoyar a la Selección Colombia, una jornada que unió a colaboradores de todas las áreas.",
+  },
+  {
+    year: "2018",
+    date: "Mayo 30",
+    title: "Capacitación Personal",
+    text: "Realizamos jornadas de capacitación al personal en los sistemas, procesos y equipos de Solutraffic, fortaleciendo las competencias del equipo.",
+  },
+  {
+    year: "2018",
+    date: "Mayo 4",
+    title: "Laboratorio y Producción",
+    text: "Pusimos en marcha nuestro laboratorio y área de producción, donde diseñamos y ensamblamos los equipos de semaforización de la compañía.",
+  },
+  {
+    year: "2018",
+    date: "Marzo 20",
+    title: "Recepción y Show Room Solutraffic",
+    text: "Inauguramos la recepción y el show room de Solutraffic, un espacio para recibir a nuestros clientes y exhibir las soluciones de movilidad.",
+  },
+  {
+    year: "2015",
+    date: "",
+    title: "Equipo Cova",
+    text: "Los inicios de Solutraffic: el equipo Cova, uno de los primeros grupos de trabajo de la compañía.",
+  },
 ];
 
-const MediaViewer = ({ hito, media }) => {
+const MediaViewer = ({ hito, media, active }) => {
   const items = [
     ...(media?.imagenes ?? []).map((src) => ({ type: "img", src })),
     ...(media?.videos ?? []).map((src) => ({ type: "video", src })),
   ];
   const [pos, setPos] = useState(0);
   const [lightbox, setLightbox] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const videoRef = useRef(null);
 
   const imageIndexes = items.reduce(
     (acc, item, i) => (item.type === "img" ? [...acc, i] : acc),
     []
   );
   const imgPos = imageIndexes.indexOf(pos);
+  const current = items[pos] ?? null;
+  const currentType = current?.type;
 
   const goImage = (delta) => {
     if (imageIndexes.length === 0) return;
@@ -105,9 +196,32 @@ const MediaViewer = ({ hito, media }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lightbox, pos]);
 
+  // Avance automático de la galería: solo imágenes, solo cuando el hito está
+  // visible y el usuario no está interactuando con el visor.
+  useEffect(() => {
+    if (!active || lightbox || hovered || items.length <= 1 || currentType !== "img") {
+      return undefined;
+    }
+    const timer = setTimeout(() => {
+      setPos((p) => (p + 1) % items.length);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, [active, lightbox, hovered, currentType, pos, items.length]);
+
+  // El video suena/reproduce solo cuando su hito está activo; al salir se pausa.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (active) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }, [active, currentType, pos]);
+
   if (items.length === 0) {
     return (
-      <div className="w-full md:w-72 lg:w-96 h-44 md:h-full shrink-0 rounded-xl border-2 border-dashed border-border bg-yellow-soft/50 flex flex-col items-center justify-center gap-2 text-contrast-muted">
+      <div className="w-full md:w-80 lg:w-[26rem] h-56 md:h-full shrink-0 rounded-xl border-2 border-dashed border-border bg-yellow-soft/50 flex flex-col items-center justify-center gap-2 text-contrast-muted">
         <FaImage className="text-2xl" />
         <span className="text-body-sm-mobile md:text-body-sm text-center px-4">
           Espacio para imagen / GIF del hito
@@ -116,19 +230,26 @@ const MediaViewer = ({ hito, media }) => {
     );
   }
 
-  const current = items[pos];
   const goTo = (i) => setPos(((i % items.length) + items.length) % items.length);
 
   return (
     <>
-      <div className="relative w-full md:w-72 lg:w-96 h-44 md:h-full shrink-0 rounded-xl overflow-hidden bg-contrast/5 group">
+      <div
+        className="relative w-full md:w-80 lg:w-[26rem] h-56 md:h-full shrink-0 rounded-xl overflow-hidden bg-contrast/5 group"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         {current.type === "video" ? (
           <video
             key={current.src}
+            ref={videoRef}
             src={current.src}
             className="w-full h-full object-cover"
             controls
             playsInline
+            autoPlay={active}
+            muted
+            loop
             preload="metadata"
           />
         ) : (
@@ -240,13 +361,20 @@ const Timeline = () => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
+  const currentMedia = timelineMedia[index] ?? {};
+  const imageCount = currentMedia.imagenes?.length ?? 0;
+  const hasVideo = (currentMedia.videos?.length ?? 0) > 0;
+  // Tiempo que cada hito permanece visible: da espacio a todas sus imágenes
+  // (que rotan solas) y, si tiene, al video.
+  const dwell = Math.max(5000, imageCount * 3800 + (hasVideo ? 9000 : 0) + 1000);
+
   useEffect(() => {
     if (paused) return undefined;
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setIndex((prev) => (prev + 1) % total);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, [paused, total]);
+    }, dwell);
+    return () => clearTimeout(timer);
+  }, [paused, total, dwell, index]);
 
   const goTo = (i) => setIndex(((i % total) + total) % total);
 
@@ -276,7 +404,7 @@ const Timeline = () => {
       </div>
 
       {/* Visor del carrusel */}
-      <div className="relative flex-1 h-[24rem] sm:h-[22rem] overflow-hidden">
+      <div className="relative flex-1 h-[30rem] sm:h-[24rem] overflow-hidden">
         <div
           className="flex flex-col transition-transform duration-700 ease-out"
           style={{
@@ -285,7 +413,6 @@ const Timeline = () => {
           }}
         >
           {hitos.map((hito, i) => {
-            const firstOfYear = i === 0 || hitos[i - 1].year !== hito.year;
             return (
               <div
                 key={`${hito.year}-${hito.date}-${i}`}
@@ -295,15 +422,8 @@ const Timeline = () => {
                 <div className="w-full flex flex-col md:flex-row items-center gap-5 md:gap-10 md:h-full">
                   {/* Información del hito */}
                   <div className="flex-1 min-w-0">
-                    <span className="inline-flex items-center gap-3">
-                      <span className="text-primary font-bold text-h3-mobile md:text-h3 tracking-wide">
-                        {hito.year}
-                      </span>
-                      {firstOfYear && (
-                        <span className="uppercase tracking-[0.20em] text-body-sm-mobile md:text-body-sm font-semibold text-contrast-muted">
-                          Hito del año
-                        </span>
-                      )}
+                    <span className="text-primary font-bold text-h3-mobile md:text-h3 tracking-wide">
+                      {hito.year}
                     </span>
                     {hito.date && (
                       <p className="mt-1 text-contrast-soft text-body-sm-mobile md:text-body-sm font-semibold uppercase tracking-wide">
@@ -325,6 +445,7 @@ const Timeline = () => {
                     key={`${hito.year}-${hito.date}-${i}`}
                     hito={hito}
                     media={timelineMedia[i]}
+                    active={i === index}
                   />
                 </div>
               </div>
@@ -536,6 +657,21 @@ const SobreNosotros = () => {
         </div>
       </div>
 
+      {/* Sección: Línea de tiempo */}
+      <div className="bg-background">
+        <Inner>
+          <div className="py-12 sm:py-16">
+            <Reveal delay={100} className="text-center">
+              <SmallLabel text="Nuestra Trayectoria" />
+              <BigTitle text="Línea de Tiempo" />
+            </Reveal>
+            <Reveal delay={200}>
+              <Timeline />
+            </Reveal>
+          </div>
+        </Inner>
+      </div>
+
       {/* Sección: Calidad y municipios (imagen der, fondo amarillo a todo el ancho izq) */}
       <div className="lg:flex lg:flex-row-reverse lg:items-stretch">
         <Reveal direction="left" className="lg:w-2/5 relative">
@@ -571,21 +707,6 @@ const SobreNosotros = () => {
             </div>
           </Inner>
         </div>
-      </div>
-
-      {/* Sección: Línea de tiempo */}
-      <div className="bg-background">
-        <Inner>
-          <div className="py-12 sm:py-16">
-            <Reveal delay={100} className="text-center">
-              <SmallLabel text="Nuestra Trayectoria" />
-              <BigTitle text="Línea de Tiempo" />
-            </Reveal>
-            <Reveal delay={200}>
-              <Timeline />
-            </Reveal>
-          </div>
-        </Inner>
       </div>
     </section>
   );
