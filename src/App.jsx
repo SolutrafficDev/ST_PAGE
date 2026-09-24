@@ -36,9 +36,9 @@ function App() {
           element={
             <>
               <Inicio />
-              <SobreNosotros />
               <Productos />
               <Servicios />
+              <SobreNosotros />
               <CompromisoSocial />
               <Contactanos />
             </>

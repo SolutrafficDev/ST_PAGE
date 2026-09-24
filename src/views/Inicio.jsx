@@ -50,7 +50,7 @@ const Inicio = () => {
           <img
             src={logos.lightGrayFullt}
             alt="SolutrafficCra"
-            className="w-[180px] sm:w-[240px] md:w-[320px] lg:w-[400px] h-auto"
+            className="w-[240px] sm:w-[320px] md:w-[420px] lg:w-[520px] max-w-[90vw] h-auto"
           />
           <span className="text-primary text-[24px] md:text-[18px] text-center font-semibold">
             SOLUCIONES PARA LA MOVILIDAD
