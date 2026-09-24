@@ -18,6 +18,37 @@ const outFile = join(root, "src", "data", "timelineMedia.js");
 const IMG_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
 const VID_EXT = new Set([".mp4", ".webm", ".mov", ".m4v", ".ogv"]);
 
+// Curaduría editorial de imágenes por hito.
+// Clave: número del hito (prefijo de la carpeta). Valor: archivos a usar,
+// en el orden en que deben mostrarse. Los archivos no listados se omiten.
+const CURATED_IMAGES = {
+  5: [
+    "06_IMG-20180619-WA0049.jpg",
+    "03_IMG-20180619-WA0159.jpg",
+    "04_IMG-20180619-WA0169.jpg",
+  ],
+  6: [
+    "02_20180622_103718.jpg",
+    "15_20180621_124005.jpg",
+    "13_20180621_123217.jpg",
+  ],
+  7: [
+    "03_IMG-20181221-WA0045.jpg",
+    "04_IMG-20181221-WA0044.jpg",
+    "02_IMG-20181221-WA0046.jpg",
+  ],
+  8: [
+    "03_IMG-20190228-WA0059.jpg",
+    "02_IMG-20190228-WA0056.jpg",
+    "07_20190724_115257.jpg",
+  ],
+  11: [
+    "01_20191003_125340.jpg",
+    "03_20191003_130219.jpg",
+    "02_20191003_130208.jpg",
+  ],
+};
+
 const ext = (name) => name.slice(name.lastIndexOf(".")).toLowerCase();
 
 // Convierte un nombre de archivo en un identificador valido de JS.
@@ -68,7 +99,19 @@ for (const { folder } of byNumber) {
     .map((e) => e.name)
     .sort();
 
-  const imgVars = imgFiles.map((file, i) => {
+  // Aplica la curaduría (si existe) conservando el orden definido a mano.
+  const curated = CURATED_IMAGES[Number.parseInt(folder, 10)];
+  if (curated) {
+    const missing = curated.filter((name) => !imgFiles.includes(name));
+    if (missing.length > 0) {
+      throw new Error(
+        `Curaduría del hito ${folder} referencia archivos inexistentes: ${missing.join(", ")}`
+      );
+    }
+  }
+  const selectedImgFiles = curated ?? imgFiles;
+
+  const imgVars = selectedImgFiles.map((file, i) => {
     const v = `${base}_img_${sanitize(file)}`;
     imports.push(`import ${v} from "../${rel(join(imgDir, file))}";`);
     return { v, i };

@@ -36,54 +36,27 @@ import hito4_vid_04_20180517_124312 from "../assets/TIMELINE_ST/04_2018-05-30_Ca
 
 // 05_2018-06-19_Mundial_Solutraffic
 import hito5Portada from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/portada.jpg";
-import hito5_img_01_IMG_20180619_WA0048 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/01_IMG-20180619-WA0048.jpg";
-import hito5_img_02_IMG_20180619_WA0157 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/02_IMG-20180619-WA0157.jpg";
+import hito5_img_06_IMG_20180619_WA0049 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/06_IMG-20180619-WA0049.jpg";
 import hito5_img_03_IMG_20180619_WA0159 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/03_IMG-20180619-WA0159.jpg";
 import hito5_img_04_IMG_20180619_WA0169 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/04_IMG-20180619-WA0169.jpg";
-import hito5_img_05_IMG_20180619_WA0154 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/05_IMG-20180619-WA0154.jpg";
-import hito5_img_06_IMG_20180619_WA0049 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/06_IMG-20180619-WA0049.jpg";
-import hito5_img_07_IMG_20180619_WA0160 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/07_IMG-20180619-WA0160.jpg";
-import hito5_img_08_IMG_20180619_WA0168 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/08_IMG-20180619-WA0168.jpg";
-import hito5_img_09_IMG_20180619_WA0053 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/09_IMG-20180619-WA0053.jpg";
-import hito5_img_10_IMG_20180619_WA0052 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/10_IMG-20180619-WA0052.jpg";
-import hito5_img_11_IMG_20180619_WA0050 from "../assets/TIMELINE_ST/05_2018-06-19_Mundial_Solutraffic/img/11_IMG-20180619-WA0050.jpg";
 
 // 06_2018-06-21_Inicio_Central_Palmira
 import hito6Portada from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/portada.jpg";
-import hito6_img_01_20180621_123222 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/01_20180621_123222.jpg";
 import hito6_img_02_20180622_103718 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/02_20180622_103718.jpg";
-import hito6_img_03_20180621_123935 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/03_20180621_123935.jpg";
-import hito6_img_04_20180621_123946 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/04_20180621_123946.jpg";
-import hito6_img_05_20180621_123228 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/05_20180621_123228.jpg";
-import hito6_img_06_20180621_123239 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/06_20180621_123239.jpg";
-import hito6_img_07_20180621_123219 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/07_20180621_123219.jpg";
-import hito6_img_08_20180621_123920 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/08_20180621_123920.jpg";
-import hito6_img_09_20180621_123237 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/09_20180621_123237.jpg";
-import hito6_img_10_20180622_103726 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/10_20180622_103726.jpg";
-import hito6_img_11_20180621_123250 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/11_20180621_123250.jpg";
-import hito6_img_12_20180621_123244 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/12_20180621_123244.jpg";
-import hito6_img_13_20180621_123217 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/13_20180621_123217.jpg";
-import hito6_img_14_20180621_123907 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/14_20180621_123907.jpg";
 import hito6_img_15_20180621_124005 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/15_20180621_124005.jpg";
-import hito6_img_16_20180621_123940 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/16_20180621_123940.jpg";
+import hito6_img_13_20180621_123217 from "../assets/TIMELINE_ST/06_2018-06-21_Inicio_Central_Palmira/img/13_20180621_123217.jpg";
 
 // 07_2018-12-21_Solutraffic_Humana
 import hito7Portada from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/portada.jpg";
-import hito7_img_01_IMG_20181221_WA0047 from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/img/01_IMG-20181221-WA0047.jpg";
-import hito7_img_02_IMG_20181221_WA0046 from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/img/02_IMG-20181221-WA0046.jpg";
 import hito7_img_03_IMG_20181221_WA0045 from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/img/03_IMG-20181221-WA0045.jpg";
 import hito7_img_04_IMG_20181221_WA0044 from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/img/04_IMG-20181221-WA0044.jpg";
+import hito7_img_02_IMG_20181221_WA0046 from "../assets/TIMELINE_ST/07_2018-12-21_Solutraffic_Humana/img/02_IMG-20181221-WA0046.jpg";
 
 // 08_2019-02-28_Entrega_Central_Palmira
 import hito8Portada from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/portada.jpg";
-import hito8_img_01_IMG_20190228_WA0051 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/01_IMG-20190228-WA0051.jpg";
-import hito8_img_02_IMG_20190228_WA0056 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/02_IMG-20190228-WA0056.jpg";
 import hito8_img_03_IMG_20190228_WA0059 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/03_IMG-20190228-WA0059.jpg";
-import hito8_img_04_IMG_20190228_WA0050 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/04_IMG-20190228-WA0050.jpg";
-import hito8_img_05_IMG_20190228_WA0057 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/05_IMG-20190228-WA0057.jpg";
-import hito8_img_06_IMG_20190228_WA0060 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/06_IMG-20190228-WA0060.jpg";
+import hito8_img_02_IMG_20190228_WA0056 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/02_IMG-20190228-WA0056.jpg";
 import hito8_img_07_20190724_115257 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/07_20190724_115257.jpg";
-import hito8_img_08_IMG_20190228_WA0061 from "../assets/TIMELINE_ST/08_2019-02-28_Entrega_Central_Palmira/img/08_IMG-20190228-WA0061.jpg";
 
 // 09_2019-03-12_Controlador_Cova_Inalambrico
 import hito9Portada from "../assets/TIMELINE_ST/09_2019-03-12_Controlador_Cova_Inalambrico/portada.jpg";
@@ -101,10 +74,8 @@ import hito10_img_03_20190722_094326 from "../assets/TIMELINE_ST/10_2019-07-22_P
 // 11_2019-10-03_Capacitacion_Palmira
 import hito11Portada from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/portada.jpg";
 import hito11_img_01_20191003_125340 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/01_20191003_125340.jpg";
-import hito11_img_02_20191003_130208 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/02_20191003_130208.jpg";
 import hito11_img_03_20191003_130219 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/03_20191003_130219.jpg";
-import hito11_img_04_20191003_125353 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/04_20191003_125353.jpg";
-import hito11_img_05_20191003_125339 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/05_20191003_125339.jpg";
+import hito11_img_02_20191003_130208 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/img/02_20191003_130208.jpg";
 import hito11_vid_01_20191003_122839 from "../assets/TIMELINE_ST/11_2019-10-03_Capacitacion_Palmira/video/01_20191003_122839.mp4";
 
 // 12_2019-10-24_Ensamble_Prototipo_MTix
@@ -193,7 +164,7 @@ export const timelineMedia = [
   },
   {
     portada: hito11Portada,
-    imagenes: [hito11_img_01_20191003_125340, hito11_img_02_20191003_130208, hito11_img_03_20191003_130219, hito11_img_04_20191003_125353, hito11_img_05_20191003_125339],
+    imagenes: [hito11_img_01_20191003_125340, hito11_img_03_20191003_130219, hito11_img_02_20191003_130208],
     videos: [hito11_vid_01_20191003_122839],
   },
   {
@@ -208,22 +179,22 @@ export const timelineMedia = [
   },
   {
     portada: hito8Portada,
-    imagenes: [hito8_img_01_IMG_20190228_WA0051, hito8_img_02_IMG_20190228_WA0056, hito8_img_03_IMG_20190228_WA0059, hito8_img_04_IMG_20190228_WA0050, hito8_img_05_IMG_20190228_WA0057, hito8_img_06_IMG_20190228_WA0060, hito8_img_07_20190724_115257, hito8_img_08_IMG_20190228_WA0061],
+    imagenes: [hito8_img_03_IMG_20190228_WA0059, hito8_img_02_IMG_20190228_WA0056, hito8_img_07_20190724_115257],
     videos: [],
   },
   {
     portada: hito7Portada,
-    imagenes: [hito7_img_01_IMG_20181221_WA0047, hito7_img_02_IMG_20181221_WA0046, hito7_img_03_IMG_20181221_WA0045, hito7_img_04_IMG_20181221_WA0044],
+    imagenes: [hito7_img_03_IMG_20181221_WA0045, hito7_img_04_IMG_20181221_WA0044, hito7_img_02_IMG_20181221_WA0046],
     videos: [],
   },
   {
     portada: hito6Portada,
-    imagenes: [hito6_img_01_20180621_123222, hito6_img_02_20180622_103718, hito6_img_03_20180621_123935, hito6_img_04_20180621_123946, hito6_img_05_20180621_123228, hito6_img_06_20180621_123239, hito6_img_07_20180621_123219, hito6_img_08_20180621_123920, hito6_img_09_20180621_123237, hito6_img_10_20180622_103726, hito6_img_11_20180621_123250, hito6_img_12_20180621_123244, hito6_img_13_20180621_123217, hito6_img_14_20180621_123907, hito6_img_15_20180621_124005, hito6_img_16_20180621_123940],
+    imagenes: [hito6_img_02_20180622_103718, hito6_img_15_20180621_124005, hito6_img_13_20180621_123217],
     videos: [],
   },
   {
     portada: hito5Portada,
-    imagenes: [hito5_img_01_IMG_20180619_WA0048, hito5_img_02_IMG_20180619_WA0157, hito5_img_03_IMG_20180619_WA0159, hito5_img_04_IMG_20180619_WA0169, hito5_img_05_IMG_20180619_WA0154, hito5_img_06_IMG_20180619_WA0049, hito5_img_07_IMG_20180619_WA0160, hito5_img_08_IMG_20180619_WA0168, hito5_img_09_IMG_20180619_WA0053, hito5_img_10_IMG_20180619_WA0052, hito5_img_11_IMG_20180619_WA0050],
+    imagenes: [hito5_img_06_IMG_20180619_WA0049, hito5_img_03_IMG_20180619_WA0159, hito5_img_04_IMG_20180619_WA0169],
     videos: [],
   },
   {
