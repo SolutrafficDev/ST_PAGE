@@ -1,6 +1,12 @@
 import main from "../../assets/products/11/main.png";
-import inventario from "../../assets/products/11/1.png";
+import login from "../../assets/products/11/1.png";
 import planSemaforico from "../../assets/products/11/2.png";
+import monitoreo from "../../assets/products/11/3.png";
+import inventario from "../../assets/products/11/4.png";
+import usuarios from "../../assets/products/11/5.png";
+import tickets from "../../assets/products/11/6.png";
+import camaras from "../../assets/products/11/7.png";
+import eventos from "../../assets/products/11/8.png";
 
 const producto = {
   id: "software-central-st",
@@ -13,7 +19,16 @@ const producto = {
     "Central ST es una solución de ingeniería avanzada orientada a la supervisión, telegestión y control integral de intersecciones semafóricas. Diseñada para garantizar una operación moderna, fluida y en tiempo real, permite coordinar la movilidad urbana combinando interoperabilidad bajo protocolo NTCIP, analítica técnica y videovigilancia.",
   gif: main,
   imagen: main,
-  galeria: [inventario, planSemaforico],
+  galeria: [
+    login,
+    planSemaforico,
+    monitoreo,
+    inventario,
+    usuarios,
+    tickets,
+    camaras,
+    eventos,
+  ],
   caracteristicasTitulo: "Funcionalidades principales",
   caracteristicas: [
     "Monitoreo en tiempo real del estado operativo de la red semafórica y de la salud de cada controlador M-TIX.",
