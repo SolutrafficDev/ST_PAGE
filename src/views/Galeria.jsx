@@ -10,6 +10,9 @@ const sortImages = (images) =>
 const palmiraImages = sortImages(
   import.meta.glob("../assets/Palmira/*.{jpg,jpeg,png}", { eager: true, import: "default" })
 );
+const candelariaImages = sortImages(
+  import.meta.glob("../assets/Candelaria/*.{jpg,jpeg,png}", { eager: true, import: "default" })
+);
 const caliImages = sortImages(
   import.meta.glob("../assets/Cali/*.{jpg,jpeg,png}", { eager: true, import: "default" })
 );
@@ -36,6 +39,7 @@ const createItems = (category, images) =>
 
 const galleryItems = [
   ...createItems("Palmira", palmiraImages),
+  ...createItems("Candelaria", candelariaImages),
   ...createItems("Cali", caliImages),
   ...createItems("Equipo Solutraffic", equipoImages),
 ];
