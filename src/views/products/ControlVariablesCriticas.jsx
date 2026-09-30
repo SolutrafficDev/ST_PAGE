@@ -1,6 +1,7 @@
 import card from "../../assets/products/10/card.png";
 import main from "../../assets/products/10/main.png";
 import instalacion from "../../assets/products/10/1.png";
+import instalacion2 from "../../assets/products/10/2.png";
 
 const producto = {
   id: "control-de-variables-criticas",
@@ -13,7 +14,7 @@ const producto = {
     "El ST-MVC-100 le permite saber desde el centro de gestión qué está pasando dentro de cada gabinete semafórico: si los controladores tienen energía, si sus fuentes internas trabajan en rango y si la temperatura es segura. Cuando un controlador se bloquea, se reinicia en forma remota, sin enviar una cuadrilla a la intersección. Un solo equipo supervisa hasta tres controladores M-TIX y se instala en el mismo rack del gabinete, ocupando una unidad (1U).",
   gif: card,
   imagen: main,
-  galeria: [instalacion],
+  galeria: [instalacion, instalacion2],
   caracteristicasTitulo: "Beneficios",
   caracteristicas: [
     "Visibilidad real del gabinete: la central deja de ver solo “responde / no responde” y pasa a ver el estado eléctrico y térmico de cada controlador.",
