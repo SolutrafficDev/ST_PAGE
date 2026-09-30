@@ -104,11 +104,11 @@ const Galeria = () => {
           ))}
         </div>
 
-        <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 no-scrollbar">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visibleItems.map((item) => (
             <article
               key={`${item.category}-${item.src}`}
-              className="w-[82vw] max-w-[360px] shrink-0 snap-start overflow-hidden rounded-2xl border border-secondary/10 bg-white shadow-lg sm:w-[380px]"
+              className="overflow-hidden rounded-2xl border border-secondary/10 bg-white shadow-lg"
             >
               <div className="aspect-[4/3] overflow-hidden bg-blue-soft">
                 <img
