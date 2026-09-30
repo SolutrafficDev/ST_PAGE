@@ -19,6 +19,9 @@ const caliImages = sortImages(
 const equipoImages = sortImages(
   import.meta.glob("../assets/Equipo_Solutraffic/*.{jpg,jpeg,png}", { eager: true, import: "default" })
 );
+const medellinImages = sortImages(
+  import.meta.glob("../assets/Medellin/*.{jpg,jpeg,png}", { eager: true, import: "default" })
+);
 
 const categories = [
   "Todos",
@@ -26,6 +29,7 @@ const categories = [
   "Candelaria",
   "Cali",
   "Dosquebradas",
+  "Medellín",
   "Instalaciones",
   "Equipo Solutraffic",
 ];
@@ -41,6 +45,7 @@ const galleryItems = [
   ...createItems("Palmira", palmiraImages),
   ...createItems("Candelaria", candelariaImages),
   ...createItems("Cali", caliImages),
+  ...createItems("Medellín", medellinImages),
   ...createItems("Equipo Solutraffic", equipoImages),
 ];
 

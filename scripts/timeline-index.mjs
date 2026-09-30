@@ -49,6 +49,10 @@ const CURATED_IMAGES = {
   ],
 };
 
+// Hitos en los que el video debe mostrarse antes que las imagenes.
+// Clave: numero del hito (prefijo de la carpeta).
+const VIDEO_FIRST = new Set([2]);
+
 const ext = (name) => name.slice(name.lastIndexOf(".")).toLowerCase();
 
 // Convierte un nombre de archivo en un identificador valido de JS.
@@ -78,7 +82,7 @@ const varBase = (folder) => `hito${Number.parseInt(folder, 10)}`;
 const imports = [];
 const entries = [];
 
-for (const { folder } of byNumber) {
+for (const { folder, num } of byNumber) {
   const base = varBase(folder);
   const folderPath = join(assetsDir, folder);
   const rel = (p) => relative(join(root, "src"), p).split("\\").join("/");
@@ -123,7 +127,7 @@ for (const { folder } of byNumber) {
   });
 
   imports.push("");
-  entries.push({ folder, base, imgVars, vidVars });
+  entries.push({ folder, num, base, imgVars, vidVars });
 }
 
 const entryByName = new Map(entries.map((e) => [e.folder, e]));
@@ -137,6 +141,7 @@ const blocks = byDateDesc.map(({ folder }) => {
     `    portada: ${e.base}Portada,`,
     `    imagenes: [${imgs}],`,
     `    videos: [${vids}],`,
+    `    videoPrimero: ${VIDEO_FIRST.has(e.num) ? "true" : "false"},`,
     "  },",
   ].join("\n");
 });

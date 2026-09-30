@@ -161,10 +161,10 @@ const hitos = [
 ];
 
 const MediaViewer = ({ hito, media, active }) => {
-  const items = [
-    ...(media?.imagenes ?? []).map((src) => ({ type: "img", src })),
-    ...(media?.videos ?? []).map((src) => ({ type: "video", src })),
-  ];
+  const imagenes = (media?.imagenes ?? []).map((src) => ({ type: "img", src }));
+  const videos = (media?.videos ?? []).map((src) => ({ type: "video", src }));
+  // En algunos hitos (por ejemplo Recepción y Show Room) el video va primero.
+  const items = media?.videoPrimero ? [...videos, ...imagenes] : [...imagenes, ...videos];
   const [pos, setPos] = useState(0);
   const [lightbox, setLightbox] = useState(false);
   const [hovered, setHovered] = useState(false);
